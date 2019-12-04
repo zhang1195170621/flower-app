@@ -1,32 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <van-tabbar route>
+      <van-tabbar-item icon="wap-home-o" :to="{name:'Home'}">首页</van-tabbar-item>
+      <van-tabbar-item icon="todo-list-o" :to="{name:'Fl'}">分类</van-tabbar-item>
+      <van-tabbar-item icon="cart-o" :to="{name:'Cart'}">购物车</van-tabbar-item>
+      <van-tabbar-item icon="smile-o" :to="{name:'Me'}">我的</van-tabbar-item>
+    </van-tabbar>
+
+    <router-view />
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<script>
+export default {
+  data() {
+    return {
+      //active: 0
+    };
+  }
+};
+</script>
