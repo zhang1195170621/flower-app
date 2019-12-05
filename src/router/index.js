@@ -4,11 +4,11 @@ import Home from '../views/Home.vue';
 import Cart from '../views/Cart.vue';
 import Fl from '../views/Fl.vue';
 import Me from '../views/Me.vue';
+import Dl from '../views/denglu/Denglu.vue';
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     name: 'Home',
     component: Home,
@@ -27,7 +27,13 @@ const routes = [
     path: '/m',
     name: 'Me',
     component: Me,
+    children: [{
+      path: '/denglu',
+      name: 'Denglu',
+      component: Dl,
+    }]
   },
+
 ];
 
 const router = new VueRouter({
