@@ -7,7 +7,8 @@
         <div class="login">
           <p class="login-hi">Hi,欢迎来到花礼网</p>
           <p class="denglu">
-            <a>登录/注册</a>
+            <router-link :to="{name:'Denglu'}">登录/注册</router-link>
+            <router-view />
           </p>
         </div>
       </div>
@@ -16,7 +17,7 @@
         <div class="panel-head">
           <div class="panel-head-title">我的订单</div>
           <div class="panel-head-right">
-            <a>全部订单</a>
+            <a @click="DL">全部订单</a>
           </div>
         </div>
         <div class="panel-body">
@@ -103,12 +104,24 @@
   </div>
 </template>
 
-
+ <script>
+export default {
+  methods: {
+    DL() {
+      if (localStorage.getItem("token")) {
+      } else {
+        this.$router.push({
+          name: "Denglu"
+        });
+      }
+    }
+  }
+};
+</script> **/
 
 
 <style scoped>
 .wxguanjia-cont {
-  width: 25.35714286rem;
   height: 4.78571429rem;
   margin: 2.5rem auto;
   padding: 1.14285714rem 1rem 1.07142857rem;
@@ -127,7 +140,6 @@
   float: right;
   width: 40%;
   vertical-align: top;
-  text-align: right;
 }
 .wxguanjia-head-left {
   float: left;

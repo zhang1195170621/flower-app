@@ -921,6 +921,9 @@ export default {
 };
 </script>
 <style scoped>
+.van-tree-select__nav {
+  width: 4rem;
+}
 #d_xh_obj {
   padding: 0.57142857rem 1.28571429rem;
   border-radius: 0.14285714rem;
