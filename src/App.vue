@@ -11,7 +11,11 @@
   </div>
 </template>
 
-
+<style>
+#app {
+  overflow: hidden;
+}
+</style>
 <script>
 export default {
   data() {
