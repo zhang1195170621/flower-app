@@ -320,6 +320,7 @@
     <!-- 送长辈 -->
     <section class="product">
       <h3 class="product-title">送长辈鲜花</h3>
+      <h3 class="product-title">不送长辈鲜花</h3>
       <div class="product-list">
         <div class="product-item-horizontal">
           <div class="product-item-pic">
@@ -482,10 +483,7 @@
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
-                <img
-                  src="https://img01.hua.com/uploadpic/newpic/1073257.jpg_220x240.jpg"
-                  alt
-                />
+                <img src="https://img01.hua.com/uploadpic/newpic/1073257.jpg_220x240.jpg" alt />
               </div>
               <div class="guess-item-detail">
                 <div class="guess-item-info">
@@ -502,80 +500,71 @@
           </div>
         </div>
         <div class="guess-list">
-            <div class="guess-item">
-              <a href>
-                <div class="guess-item-img">
-                  <img
-                    src="https://img01.hua.com/uploadpic/newpic/1073264.jpg_220x240.jpg"
-                    alt
-                  />
-                </div>
-                <div class="guess-item-detail">
-                  <div class="guess-item-info">
-                    <van-tag round type="warning">创意新品</van-tag>
-                  </div>
-                  <span class="guess-item-name">一鹿(路)有你永生小花</span>
-                  <p class="product-item-info-prices">
-                    <strong>¥298</strong>
-                    <s>¥309</s>
-                  </p>
-                  <p class="product-item-info-sales">已销售71件</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="guess">
-          <div class="guess-list">
-            <div class="guess-item">
-              <a href>
-                <div class="guess-item-img">
-                  <img
-                    src="https://img01.hua.com/uploadpic/newpic/1073185.jpg_220x240.jpg"
-                    alt
-                  />
-                </div>
-                <div class="guess-item-detail">
-                  <div class="guess-item-info">
-                    <van-tag round type="warning">畅销</van-tag>
-                  </div>
-                  <span class="guess-item-name">一鹿(路)有你永生小花</span>
-                  <p class="product-item-info-prices">
-                    <strong>¥588</strong>
-                    <s>¥788</s>
-                  </p>
-                  <p class="product-item-info-sales">已销售6352件</p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="guess-list">
-              <div class="guess-item">
-                <a href>
-                  <div class="guess-item-img">
-                    <img
-                      src="https://img01.hua.com/uploadpic/newpic/1073263.jpg_220x240.jpg"
-                      alt
-                    />
-                  </div>
-                  <div class="guess-item-detail">
-                    <div class="guess-item-info">
-                      <van-tag round type="warning">创意新品</van-tag>
-                    </div>
-                    <span class="guess-item-name">永生花满月艺术台灯</span>
-                    <p class="product-item-info-prices">
-                      <strong>¥398</strong>
-                      <s>¥498</s>
-                    </p>
-                    <p class="product-item-info-sales">已销售73件</p>
-                  </div>
-                </a>
+          <div class="guess-item">
+            <a href>
+              <div class="guess-item-img">
+                <img src="https://img01.hua.com/uploadpic/newpic/1073264.jpg_220x240.jpg" alt />
               </div>
-            </div>
+              <div class="guess-item-detail">
+                <div class="guess-item-info">
+                  <van-tag round type="warning">创意新品</van-tag>
+                </div>
+                <span class="guess-item-name">一鹿(路)有你永生小花</span>
+                <p class="product-item-info-prices">
+                  <strong>¥298</strong>
+                  <s>¥309</s>
+                </p>
+                <p class="product-item-info-sales">已销售71件</p>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="bottom_guo">
-          <p class="bottom_guo-btn">查看更多</p>
+      </div>
+      <div class="guess">
+        <div class="guess-list">
+          <div class="guess-item">
+            <a href>
+              <div class="guess-item-img">
+                <img src="https://img01.hua.com/uploadpic/newpic/1073185.jpg_220x240.jpg" alt />
+              </div>
+              <div class="guess-item-detail">
+                <div class="guess-item-info">
+                  <van-tag round type="warning">畅销</van-tag>
+                </div>
+                <span class="guess-item-name">一鹿(路)有你永生小花</span>
+                <p class="product-item-info-prices">
+                  <strong>¥588</strong>
+                  <s>¥788</s>
+                </p>
+                <p class="product-item-info-sales">已销售6352件</p>
+              </div>
+            </a>
+          </div>
         </div>
+        <div class="guess-list">
+          <div class="guess-item">
+            <a href>
+              <div class="guess-item-img">
+                <img src="https://img01.hua.com/uploadpic/newpic/1073263.jpg_220x240.jpg" alt />
+              </div>
+              <div class="guess-item-detail">
+                <div class="guess-item-info">
+                  <van-tag round type="warning">创意新品</van-tag>
+                </div>
+                <span class="guess-item-name">永生花满月艺术台灯</span>
+                <p class="product-item-info-prices">
+                  <strong>¥398</strong>
+                  <s>¥498</s>
+                </p>
+                <p class="product-item-info-sales">已销售73件</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom_guo">
+        <p class="bottom_guo-btn">查看更多</p>
+      </div>
     </section>
     <!-- 蛋糕推荐 -->
     <section class="guo_product">
@@ -586,10 +575,7 @@
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
-                <img
-                  src="https://img01.hua.com/uploadpic/newpic/5602016.jpg_220x240.jpg"
-                  alt
-                />
+                <img src="https://img01.hua.com/uploadpic/newpic/5602016.jpg_220x240.jpg" alt />
               </div>
               <div class="guess-item-detail">
                 <div class="guess-item-info">
@@ -606,87 +592,77 @@
           </div>
         </div>
         <div class="guess-list">
-            <div class="guess-item">
-              <a href>
-                <div class="guess-item-img">
-                  <img
-                    src="https://img01.hua.com/uploadpic/newpic/9092114.jpg_220x240.jpg"
-                    alt
-                  />
-                </div>
-                <div class="guess-item-detail">
-                  <div class="guess-item-info">
-                    <van-tag round type="warning">真爱蛋糕</van-tag>
-                  </div>
-                  <span class="guess-item-name">真爱+生日蛋糕B款(8寸)红玫瑰9枝</span>
-                  <p class="product-item-info-prices">
-                    <strong>¥268</strong>
-                    <s>¥298</s>
-                  </p>
-                  <p class="product-item-info-sales">已销售1045件</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="guess">
-          <div class="guess-list">
-            <div class="guess-item">
-              <a href>
-                <div class="guess-item-img">
-                  <img
-                    src="https://img01.hua.com/uploadpic/newpic/5010023.jpg_220x240.jpg"
-                    alt
-                  />
-                </div>
-                <div class="guess-item-detail">
-                  <div class="guess-item-info">
-                    <van-tag round type="warning">销量冠军</van-tag>
-                  </div>
-                  <span class="guess-item-name">生日蛋糕A8寸(2磅)心形水果鲜奶蛋糕</span>
-                  <p class="product-item-info-prices">
-                    <strong>¥178</strong>
-                    <s>¥188</s>
-                  </p>
-                  <p class="product-item-info-sales">已销售2.1万件</p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="guess-list">
-              <div class="guess-item">
-                <a href>
-                  <div class="guess-item-img">
-                    <img
-                      src="https://img01.hua.com/uploadpic/newpic/5602045.jpg_220x240.jpg"
-                      alt
-                    />
-                  </div>
-                  <div class="guess-item-detail">
-                    <div class="guess-item-info">
-                    <van-tag round type="warning">推荐</van-tag>
-                  </div>
-                    <span class="guess-item-name">浪漫果粉蛋糕(约2磅)水果蛋糕</span>
-                    <p class="product-item-info-prices">
-                      <strong>¥218</strong>
-                      <s>¥336</s>
-                    </p>
-                    <p class="product-item-info-sales">已销售1175件</p>
-                  </div>
-                </a>
+          <div class="guess-item">
+            <a href>
+              <div class="guess-item-img">
+                <img src="https://img01.hua.com/uploadpic/newpic/9092114.jpg_220x240.jpg" alt />
               </div>
-            </div>
+              <div class="guess-item-detail">
+                <div class="guess-item-info">
+                  <van-tag round type="warning">真爱蛋糕</van-tag>
+                </div>
+                <span class="guess-item-name">真爱+生日蛋糕B款(8寸)红玫瑰9枝</span>
+                <p class="product-item-info-prices">
+                  <strong>¥268</strong>
+                  <s>¥298</s>
+                </p>
+                <p class="product-item-info-sales">已销售1045件</p>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="bottom_guo">
-          <p class="bottom_guo-btn">查看更多</p>
+      </div>
+      <div class="guess">
+        <div class="guess-list">
+          <div class="guess-item">
+            <a href>
+              <div class="guess-item-img">
+                <img src="https://img01.hua.com/uploadpic/newpic/5010023.jpg_220x240.jpg" alt />
+              </div>
+              <div class="guess-item-detail">
+                <div class="guess-item-info">
+                  <van-tag round type="warning">销量冠军</van-tag>
+                </div>
+                <span class="guess-item-name">生日蛋糕A8寸(2磅)心形水果鲜奶蛋糕</span>
+                <p class="product-item-info-prices">
+                  <strong>¥178</strong>
+                  <s>¥188</s>
+                </p>
+                <p class="product-item-info-sales">已销售2.1万件</p>
+              </div>
+            </a>
+          </div>
         </div>
+        <div class="guess-list">
+          <div class="guess-item">
+            <a href>
+              <div class="guess-item-img">
+                <img src="https://img01.hua.com/uploadpic/newpic/5602045.jpg_220x240.jpg" alt />
+              </div>
+              <div class="guess-item-detail">
+                <div class="guess-item-info">
+                  <van-tag round type="warning">推荐</van-tag>
+                </div>
+                <span class="guess-item-name">浪漫果粉蛋糕(约2磅)水果蛋糕</span>
+                <p class="product-item-info-prices">
+                  <strong>¥218</strong>
+                  <s>¥336</s>
+                </p>
+                <p class="product-item-info-sales">已销售1175件</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom_guo">
+        <p class="bottom_guo-btn">查看更多</p>
+      </div>
     </section>
     <section class="qiyetuangou">
-      <img src="https://img02.hua.com/m/home/img/m_home_qiyetuangou.png" alt="">
+      <img src="https://img02.hua.com/m/home/img/m_home_qiyetuangou.png" alt />
     </section>
     <section class="brand">
       <h3>为什么选择我们</h3>
-
     </section>
   </div>
 </template>
@@ -982,13 +958,13 @@ export default {};
   border-radius: 0.14285714rem;
   margin-top: 0.8rem;
 }
-.guess-title{
+.guess-title {
   text-align: center;
   height: 3.6rem;
   font-size: 1rem;
   color: #232628;
   padding: -0 1.14285714rem;
-  line-height:3.6rem;
+  line-height: 3.6rem;
 }
 .guo_product {
   margin-top: 0.57142857rem;
@@ -1013,7 +989,7 @@ export default {};
   white-space: nowrap;
 }
 .guess-item-detail {
-  height:6rem;
+  height: 6rem;
   padding: 0.42857143rem 0.57142857rem;
 }
 .guess-item-img img {
@@ -1073,21 +1049,21 @@ a {
   background: #fff;
 }
 .guess-item-name[data-v-fae5bece] {
-    white-space: nowrap;
-    font-size: 0.85714286rem;
-    color: #232628;
-    margin: 0.3rem 0 0 0;
-    display: block;
+  white-space: nowrap;
+  font-size: 0.85714286rem;
+  color: #232628;
+  margin: 0.3rem 0 0 0;
+  display: block;
 }
-.bottom_guo .bottom_guo-btn{
-      display: block;
-    margin: 1rem auto;
-    font-size: 0.85714286rem;
-    border: 1px solid #232628;
-    width: 6.71428571rem;
-    height: 1.5rem;
-    line-height: 1.5rem;
-    text-align: center;
-    border-radius: 0.14285714rem;
+.bottom_guo .bottom_guo-btn {
+  display: block;
+  margin: 1rem auto;
+  font-size: 0.85714286rem;
+  border: 1px solid #232628;
+  width: 6.71428571rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  border-radius: 0.14285714rem;
 }
 </style>
