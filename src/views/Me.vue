@@ -128,8 +128,7 @@ export default {
   height: 4.78571429rem;
   margin: 2.5rem auto;
   padding: 1.14285714rem 1rem 1.07142857rem;
-  font-size: 0.85714286rem;
-  line-height: 1.21428571rem;
+  font-size: 0.75714286rem;
   color: #232628;
   background-image: url(//img02.hua.com/m/images/wxguanjia_wode_bg.png);
   background-position: top center;
@@ -151,12 +150,12 @@ export default {
 }
 .wxguanjia-head-btn {
   display: inline-block;
-  padding: 0 1.71428571rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 2.14285714rem;
   background-color: #ff734c;
   color: #fff;
   border-radius: 0.14285714rem;
+  margin-right: 3rem;
 }
 
 .wxguanjia-head-left img {

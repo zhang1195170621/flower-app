@@ -7,7 +7,7 @@
         <van-grid v-if="activeIndex === 0">
           <van-image src="https://img02.hua.com/m/category/Classification/hot.png" />
           <van-grid :border="false" :column-num="3" style="height:8rem">
-            <van-grid-item>
+            <van-grid-item :to="{name:'DL'}">
               <van-image
                 round
                 max-width="3.5rem"
@@ -16,7 +16,7 @@
               />
               <van-grid-item text="送恋人鲜花" />
             </van-grid-item>
-            <van-grid-item>
+            <van-grid-item :to="{name:'DE'}">
               <van-image
                 round
                 max-width="4rem"
@@ -25,7 +25,7 @@
               />
               <van-grid-item text="送长辈鲜花" />
             </van-grid-item>
-            <van-grid-item>
+            <van-grid-item :to="{name:'DH'}">
               <van-image
                 round
                 max-width="4rem"
