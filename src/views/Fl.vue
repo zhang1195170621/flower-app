@@ -7,7 +7,7 @@
         <van-grid v-if="activeIndex === 0">
           <van-image src="https://img02.hua.com/m/category/Classification/hot.png" />
           <van-grid :border="false" :column-num="3" style="height:8rem">
-            <van-grid-item :to="{name:'DL'}">
+            <van-grid-item :to="{name:'DDL'}">
               <van-image
                 round
                 max-width="3.5rem"

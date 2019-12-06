@@ -149,7 +149,7 @@ export default {
   vertical-align: top;
 }
 .wxguanjia-head-btn {
-  display: inline-block;
+  text-align: center;
   font-size: 0.9rem;
   line-height: 2.14285714rem;
   background-color: #ff734c;
