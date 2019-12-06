@@ -59,7 +59,7 @@
       <div class="panel">
         <van-grid>
           <van-grid-item icon="coupon-o" text="优惠券" :to="{name:'Youhui'}" />
-          <van-grid-item icon="ecard-pay" text="权益卡" />
+          <van-grid-item icon="ecard-pay" text="权益卡" :to="{name:'Quanxian'}" />
           <van-grid-item icon="after-sale" text="余额" />
           <van-grid-item icon="gem-o" text="会员积分" />
           <van-grid-item icon="logistics" text="收货地址" />
@@ -121,6 +121,9 @@ export default {
 
 
 <style scoped>
+.me {
+  background: #e9ecf0;
+}
 .wxguanjia-cont {
   height: 4.78571429rem;
   margin: 2.5rem auto;
@@ -248,7 +251,6 @@ a {
 body {
   font-family: SourceHanSansCN, -apple-system, Verdana, Arial, Helvetica,
     sans-serif;
-  background: #e9ecf0;
 }
 div,
 ul,
@@ -269,7 +271,6 @@ textarea {
 }
 .panel {
   background: #fff;
-  margin: 0 0.57142857rem;
   border-radius: 0.28571429rem;
   box-shadow: 0 0.28571429rem 0.42857143rem 0 #dee2e5;
 }
