@@ -5,6 +5,8 @@ import Cart from '../views/Cart.vue';
 import Fl from '../views/Fl.vue';
 import Me from '../views/Me.vue';
 import Dl from '../views/denglu/Denglu.vue';
+import Yh from '../views/denglu/Youhui.vue';
+
 import index from '../views/index.vue'
 
 Vue.use(VueRouter);
@@ -43,6 +45,10 @@ const routes = [
     path: '/denglu',
     name: 'Denglu',
     component: Dl,
+  }, {
+    path: '/youhui',
+    name: 'Youhui',
+    component: Yh
   },
 
 ];

@@ -58,7 +58,7 @@
       <!-- 优惠券列表 -->
       <div class="panel">
         <van-grid>
-          <van-grid-item icon="coupon-o" text="优惠券" />
+          <van-grid-item icon="coupon-o" text="优惠券" :to="{name:'Youhui'}" />
           <van-grid-item icon="ecard-pay" text="权益卡" />
           <van-grid-item icon="after-sale" text="余额" />
           <van-grid-item icon="gem-o" text="会员积分" />
