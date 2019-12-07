@@ -9,7 +9,7 @@ import Yh from '../views/denglu/Youhui.vue';
 import Qx from '../views/denglu/Quanxian.vue';
 import DDl from '../views/denglu/Love.vue';
 import Dh from '../views/denglu/Happy.vue';
-import De from '../views/denglu/Happy.vue';
+import De from '../views/denglu/Elder.vue';
 
 
 

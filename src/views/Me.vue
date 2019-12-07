@@ -277,11 +277,12 @@ textarea {
   background: url(https://img02.hua.com/m/member/center/backgroundv3.png)
     no-repeat;
   width: 100%;
+  padding: 0 2.266667%;
   min-height: 9.28571429rem;
   background-repeat: no-repeat;
   background-size: 100% 9.42857143rem;
   background-position: top center;
-  padding-bottom: 4.14285714rem;
+  padding-bottom: 2.14285714rem;
 }
 .me .van-nav-bar__arrow {
   color: black;
