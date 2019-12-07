@@ -9,25 +9,21 @@ import Yh from '../views/denglu/Youhui.vue';
 import Qx from '../views/denglu/Quanxian.vue';
 import DDl from '../views/denglu/Love.vue';
 import Dh from '../views/denglu/Happy.vue';
-import De from '../views/denglu/Happy.vue';
-
-
-
-
-
-import index from '../views/index.vue'
+import De from '../views/denglu/Elder.vue';
+import DGemini from '../views/denglu/Gemini.vue';
+import index from '../views/index.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
-
   {
     path: '/',
     name: 'Index',
     redirect: '/home',
     component: index,
 
-    children: [{
+    children: [
+      {
         path: '/home',
         name: 'Home',
         component: Home,
@@ -46,47 +42,52 @@ const routes = [
         path: '/m',
         name: 'Me',
         component: Me,
-
-      }
-    ]
-  }, {
+      },
+    ],
+  },
+  {
     path: '/denglu',
     name: 'Denglu',
     component: Dl,
-  }, {
+  },
+  {
     path: '/youhui',
     name: 'Youhui',
-    component: Yh
-  }, {
+    component: Yh,
+  },
+  {
     path: '/quanxian',
     name: 'Quanxian',
-    component: Qx
-  }, {
+    component: Qx,
+  },
+  {
     path: '/l',
     name: 'DL',
-    component: Dl
-
-  }, {
+    component: Dl,
+  },
+  {
     path: '/h',
     name: 'DH',
-    component: Dh
-
-  }, {
+    component: Dh,
+  },
+  {
     path: '/e',
     name: 'DDL',
-    component: DDl
-
-  }, {
+    component: DDl,
+  },
+  {
     path: '/e',
     name: 'DE',
-    component: De
+    component: De,
   },
-
-
+  {
+    path: '/d_g',
+    name: 'DGemini',
+    component: DGemini,
+  },
 ];
 
 const router = new VueRouter({
-
   routes,
 });
 
