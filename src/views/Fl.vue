@@ -5,7 +5,11 @@
     <van-tree-select height="150vw" :items="items" :main-active-index.sync="activeIndex">
       <template slot="content">
         <van-grid v-if="activeIndex === 0">
-          <van-image src="https://img02.hua.com/m/category/Classification/hot.png" />
+          <van-image
+            src="https://img02.hua.com/slider/19_banner_sheshou_m.jpg"
+            alt="星座"
+            :to="{name:'DGemini'}"
+          />
           <van-grid :border="false" :column-num="3" style="height:8rem">
             <van-grid-item :to="{name:'DDL'}">
               <van-image
@@ -37,15 +41,15 @@
           </van-grid>
 
           <van-grid :border="false" :column-num="3" style="height:8rem">
-            <van-grid-item>
+            <van-grid-item :to="{name:'DGemini'}">
               <van-image
                 round
                 max-width="4rem"
                 max-height="4rem"
                 src="https://img02.hua.com/m/category/Classification/m_category_hot_Boxedflowers.png"
-                alt="礼盒鲜花"
+                alt="星座鲜花"
               />
-              <van-grid-item text="礼盒鲜花" />
+              <van-grid-item text="星座鲜花" />
             </van-grid-item>
             <van-grid-item>
               <van-image
@@ -1039,5 +1043,8 @@ export default {
   margin-bottom: 0.85714286rem;
   box-shadow: 0px 2px 6px 0px #e9ecf0;
   box-sizing: border-box;
+}
+.van-grid-item__text {
+  font-size: 10px;
 }
 </style>

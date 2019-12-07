@@ -282,7 +282,7 @@ textarea {
   background-repeat: no-repeat;
   background-size: 100% 9.42857143rem;
   background-position: top center;
-  padding-bottom: 2.14285714rem;
+  padding-bottom: 3.64285714rem;
 }
 .me .van-nav-bar__arrow {
   color: black;

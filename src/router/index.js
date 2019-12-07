@@ -16,12 +16,12 @@ import De from '../views/denglu/Elder.vue';
 
 
 import index from '../views/index.vue'
+import DGemini from '../views/denglu/Gemini.vue';
+
 
 Vue.use(VueRouter);
 
-const routes = [
-
-  {
+const routes = [{
     path: '/',
     name: 'Index',
     redirect: '/home',
@@ -46,47 +46,52 @@ const routes = [
         path: '/m',
         name: 'Me',
         component: Me,
-
-      }
-    ]
-  }, {
+      },
+    ],
+  },
+  {
     path: '/denglu',
     name: 'Denglu',
     component: Dl,
-  }, {
+  },
+  {
     path: '/youhui',
     name: 'Youhui',
-    component: Yh
-  }, {
+    component: Yh,
+  },
+  {
     path: '/quanxian',
     name: 'Quanxian',
-    component: Qx
-  }, {
+    component: Qx,
+  },
+  {
     path: '/l',
     name: 'DL',
-    component: Dl
-
-  }, {
+    component: Dl,
+  },
+  {
     path: '/h',
     name: 'DH',
-    component: Dh
-
-  }, {
+    component: Dh,
+  },
+  {
     path: '/e',
     name: 'DDL',
-    component: DDl
-
-  }, {
+    component: DDl,
+  },
+  {
     path: '/e',
     name: 'DE',
-    component: De
+    component: De,
   },
-
-
+  {
+    path: '/d_g',
+    name: 'DGemini',
+    component: DGemini,
+  },
 ];
 
 const router = new VueRouter({
-
   routes,
 });
 
