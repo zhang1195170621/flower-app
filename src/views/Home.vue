@@ -2,15 +2,13 @@
   <div class="home">
     <header class="headerbar">
       <div class="header-left">
-        <a href="#"></a>
+        <i class="hhh-left van-icon van-icon-bars"></i>
       </div>
       <div class="header-logo">
         <img src="https://m.hua.com/content/vue/login/static/img/m_hualogo.png" alt />
       </div>
       <div class="header-right">
-        <a href="#">
-          <i class="iconfont"></i>
-        </a>
+        <i class="hhh-right van-icon van-icon-service-o"></i>
       </div>
     </header>
     <van-swipe :autoplay="3000" indicator-color="white">
@@ -28,30 +26,53 @@
       </van-swipe-item>
     </van-swipe>
     <ul class="conpany-info">
-      <li>认证龙头企</li>
-      <li class="conpany-info-item">14年品</li>
-      <li class="conpany-info-item">3小时送</li>
-      <li class="conpany-info-item">最近 条好评</li>
+      <li class="conpany-info-item">
+        <i class="van-icon van-icon-checked"></i>认证龙头企业
+      </li>
+      <li class="conpany-info-item">
+        <i class="van-icon van-icon-checked"></i>14年品
+      </li>
+      <li class="conpany-info-item">
+        <i class="van-icon van-icon-checked"></i>3小时送
+      </li>
+      <li class="conpany-info-item">
+        <i class="van-icon van-icon-checked"></i>最近343165条好评
+      </li>
     </ul>
     <van-grid :border="false" :column-num="5">
       <van-grid-item class="flower">
-        <van-image src="https://img02.hua.com/m/home/img/m_home_category_flower.png" />
+        <van-image
+          class="ggg-flower"
+          src="https://img02.hua.com/m/home/img/m_home_category_flower.png"
+        />
         <P>鲜花</P>
       </van-grid-item>
       <van-grid-item class="flower">
-        <van-image src="https://img02.hua.com/m/home/img/m_home_category_ppf.png" />
+        <van-image
+          class="ggg-flower"
+          src="https://img02.hua.com/m/home/img/m_home_category_ppf.png"
+        />
         <p>永生花</p>
       </van-grid-item>
       <van-grid-item class="flower">
-        <van-image src="https://img02.hua.com/m/home/img/m_home_category_cake.png" />
+        <van-image
+          class="ggg-flower"
+          src="https://img02.hua.com/m/home/img/m_home_category_cake.png"
+        />
         <p>蛋糕</p>
       </van-grid-item>
       <van-grid-item class="flower">
-        <van-image src="https://img02.hua.com/m/home/img/m_home_category_gift.png" />
+        <van-image
+          class="ggg-flower"
+          src="https://img02.hua.com/m/home/img/m_home_category_gift.png"
+        />
         <p>礼品</p>
       </van-grid-item>
       <van-grid-item class="flower">
-        <van-image src="https://img02.hua.com/m/home/img/m_home_category_chocolate.png" />
+        <van-image
+          class="ggg-flower"
+          src="https://img02.hua.com/m/home/img/m_home_category_chocolate.png"
+        />
         <p>巧克力</p>
       </van-grid-item>
     </van-grid>
@@ -96,7 +117,7 @@
           <p class="guo_t">特价专区</p>
           <p class="guo_c">超值好货</p>
           <div class="guo_sell_xianshi">
-            <span class="guo_sell_xianshi_left">显示直降</span>
+            <span class="guo_sell_xianshi_left">年度直降</span>
             <span class="guo__right">￥159</span>
           </div>
         </div>
@@ -135,9 +156,7 @@
                   <s>¥315</s>
                 </p>
                 <p class="product-item-info-sales">已销售7.5万件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
+                <i class="gouwuche van-icon van-icon-shopping-cart-o"></i>
               </div>
             </div>
           </div>
@@ -160,9 +179,7 @@
                   <s>¥189</s>
                 </p>
                 <p class="product-item-info-sales">已销售11.1万件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
+                <i class="gouwuche van-icon van-icon-shopping-cart-o"></i>
               </div>
             </div>
           </div>
@@ -661,8 +678,71 @@
       <img src="https://img02.hua.com/m/home/img/m_home_qiyetuangou.png" alt />
     </section>
     <section class="brand">
-      <h3>为什么选择我们</h3>
+      <h3 class="brand-title">为什么选择我们</h3>
+      <div class="brand-list">
+        <div class="brand-item">
+          <img src="https://img02.hua.com/m/pro_detail/m_details_brand_01.png" alt />
+          <p>获评鲜花龙头企业</p>
+        </div>
+      </div>
+      <div class="brand-list">
+        <div class="brand-item">
+          <img src="https://img02.hua.com/m/pro_detail/m_details_brand_02.png" alt />
+          <p>1~3小时送花上门</p>
+        </div>
+      </div>
+      <div class="brand-list">
+        <div class="brand-item">
+          <img src="https://img02.hua.com/m/pro_detail/m_details_brand_03.png" alt />
+          <p>赛事冠军花艺师团队</p>
+        </div>
+      </div>
+      <div class="brand-list">
+        <div class="brand-item">
+          <img src="https://img02.hua.com/m/pro_detail/m_details_brand_04.png" alt />
+          <p>严选花材</p>
+        </div>
+      </div>
+      <div class="brand-list">
+        <div class="brand-item">
+          <img src="https://img02.hua.com/m/pro_detail/m_details_brand_05.png" alt />
+          <p>12道严苛品控标准</p>
+        </div>
+      </div>
+      <div class="brand-list">
+        <div class="brand-item">
+          <img src="https://img02.hua.com/m/pro_detail/m_details_brand_06.png" alt />
+          <p>500万用户信赖好评</p>
+        </div>
+      </div>
     </section>
+    <footer class="footer">
+      <div class="footer-links">
+        <p class="footer-links-item">企业团队</p>
+        <p class="footer-links-item">设计师款</p>
+        <p class="footer-links-item">同城鲜花</p>
+        <p class="footer-links-item">花语大全</p>
+      </div>
+      <div class="footer-links">
+        <p class="footer-links-item">花礼优势</p>
+        <p class="footer-links-item">勇敢爱</p>
+        <p class="footer-links-item">常见问题</p>
+        <p class="footer-links-item">关于我们</p>
+      </div>
+      <div class="footer-entry">
+        <div class="footer-left">
+          <p>客户端</p>
+        </div>
+        <div class="footer-right">
+          <p>客服</p>
+        </div>
+      </div>
+      <p class="footer-copyright">
+        Copyright © 2005~2019 花礼网（中国鲜花礼品网）版权所有
+        <br />中国鲜花网领先品牌，鲜花速递专家！
+        <br />深圳市百易信息技术有限公司 粤ICP备09171662号
+      </p>
+    </footer>
   </div>
 </template>
 
@@ -671,7 +751,26 @@
 export default {};
 </script>
 <style scoped>
-.Lbt {
+.ggg-flower {
+  max-width: 2.4rem;
+}
+.gouwuche {
+  margin-left: 7rem;
+  font-size: 1.2rem;
+}
+.conpany-info-item i {
+  font-size: 0.12rem;
+  color: #435448;
+}
+.hhh-left {
+  margin-left: 1rem;
+  font-size: 1.46rem;
+}
+.hhh-right {
+  margin-right: 1rem;
+  font-size: 1.4rem;
+}
+bt {
   width: 100%;
   height: 180px;
 }
@@ -709,7 +808,10 @@ export default {};
   line-height: 2.57142857rem;
 }
 .conpany-info-item {
-  margin-left: 2.85714286rem;
+  margin-left: 1.3rem;
+}
+.conpany-info-item:nth-child(1) {
+  margin: 0;
 }
 .van-grid-item__content--center {
   padding: 10px 4px;
@@ -813,7 +915,7 @@ export default {};
 }
 .scene-item-bottom .scene-item-bottom-text {
   position: absolute;
-  bottom: 1.2rem;
+  bottom: 0.8rem;
   left: 8rem;
   z-index: 1;
   font-size: 0.71428571rem;
@@ -851,7 +953,7 @@ export default {};
 }
 .guo__right {
   position: absolute;
-  bottom: 1.2rem;
+  bottom: 0.8rem;
   left: 20rem;
   z-index: 1;
   font-size: 0.71428571rem;
@@ -869,7 +971,7 @@ export default {};
   text-align: center;
   font-size: 0.85714286rem;
   padding: 0.1rem;
-  margin: 0.22rem;
+  margin: 0.5rem;
 }
 .product {
   margin-top: 0.5rem;
@@ -887,6 +989,8 @@ export default {};
 }
 .product-item-horizontal {
   display: flex;
+  box-shadow: 0px 4px 6px 0px #dee2e5;
+  margin: 0.2rem 0;
 }
 .product-item-horizontal img {
   width: 11rem;
@@ -895,8 +999,7 @@ export default {};
 }
 .product-item-info {
   flex: 1;
-  max-width: 13rem;
-  padding: 0 1.2rem;
+  margin: 0 1rem;
   position: relative;
 }
 .text-overflow {
@@ -1054,6 +1157,9 @@ a {
   margin: 0.3rem 0 0 0;
   display: block;
 }
+.brand {
+  overflow: hidden;
+}
 .bottom_guo .bottom_guo-btn {
   display: block;
   margin: 1rem auto;
@@ -1064,5 +1170,67 @@ a {
   line-height: 1.5rem;
   text-align: center;
   border-radius: 0.14285714rem;
+}
+.brand-title {
+  font-size: 1.14285714rem;
+  text-align: center;
+  font-weight: normal;
+}
+.brand-item {
+  float: left;
+  width: 33.33333333%;
+  text-align: center;
+  padding-bottom: 0.8rem;
+}
+.brand-item > img {
+  width: 4rem;
+  height: 4rem;
+}
+.brand-item > p {
+  font-size: 0.45rem;
+  margin-top: 0.28571429rem;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.footer {
+  background: #fff;
+  margin-top: 0.57142857rem;
+}
+.footer-links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0rem;
+}
+.footer-links-item {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.3rem 0.4rem;
+  margin: 0 1rem;
+  background: #e9ecf0;
+  font-size: 0.6rem;
+  text-align: center;
+}
+.footer-copyright {
+  padding: 1rem 0;
+  font-size: 0.71428571rem;
+  color: #b4babf;
+  text-align: center;
+}
+.footer-entry {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: space-around;
 }
 </style>
