@@ -5,7 +5,7 @@
         <router-link class="cross" :to="{name:'Me'}">
           <van-icon name="cross" size="20px" click="back" />
         </router-link>
-        <router-vire />
+        <router-view />
       </div>
     </div>
     <section class="container">
