@@ -1,6 +1,6 @@
 <template>
   <div class="equity">
-    <van-nav-bar title="我的权益卡" left-text left-arrow></van-nav-bar>
+    <van-nav-bar title="我的权益卡" left-text left-arrow @click-left="onClickLeft"></van-nav-bar>
     <section class="main">
       <div class="empty">
         <img class="empty-img" src="https://img02.hua.com/m/images/card/img/empty.png" />
@@ -10,6 +10,15 @@
     </section>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    onClickLeft() {
+      this.$router.go(-1);
+    }
+  }
+};
+</script>
 
 <style>
 .main {

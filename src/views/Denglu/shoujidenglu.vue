@@ -5,7 +5,7 @@
         <router-link class="cross" :to="{name:'Me'}">
           <van-icon name="cross" size="20px" click="back" />
         </router-link>
-        <router-view />
+        <router-vire />
       </div>
     </div>
     <section class="container">
@@ -14,29 +14,27 @@
       </div>
       <div class="formgroup">
         <div class="formgroup-input">
-          <input placeholder="请输入邮箱或手机号" autocomplete="off" type="text" />
+          <input placeholder="请输入手机号" autocomplete="off" type="text" />
         </div>
       </div>
       <div class="formgroup formgroup1">
         <div class="formgroup-input">
-          <input placeholder="请输入登录密码" autocomplete="off" type="password" />
-          <div class="formgroup-input-icon"></div>
+          <input placeholder="请输入短信验证码" autocomplete="off" type="password" />
         </div>
-        <div class="formgroup-btn formgroup-btn-borderleft">忘记密码?</div>
+        <div class="formgroup-btn formgroup-btn-borderleft">获取验证码</div>
       </div>
       <div class="form-contrl">
-        <button type="button" class="formbtn">登录</button>
+        <button type="button" class="formbtn">手机登录/注册</button>
       </div>
 
       <div class="flex">
         <div class="flex-item">
-          <router-link :to="{name:'shoujidenglu'}" class="router-link-active">
-            手机短信登录
+          <router-link :to="{name:'Denglu'}" href="#/" class="router-link-active">
+            账号密码登录
             <i>
               <van-icon name="arrow" />
             </i>
           </router-link>
-          <router-view />
         </div>
         <div class="flex-item flex-item-right">
           <router-link :to="{name:'Zhuce'}">
@@ -65,6 +63,7 @@
     </div>
   </div>
 </template>
+
 <style>
 .thirdparty-login > .thirdparty-login-item .iconfont {
   font-size: 24px;
@@ -152,6 +151,17 @@
   color: #71797f;
   font-size: 13px;
   text-align: center;
+}
+.formgroup-input-icon {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  color: #b4babf;
+  text-align: center;
+  cursor: pointer;
 }
 .iconfont {
   font-family: "iconfont" !important;

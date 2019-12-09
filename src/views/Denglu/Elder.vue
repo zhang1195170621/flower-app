@@ -1,6 +1,6 @@
 <template>
   <div class="elder">
-    <van-nav-bar title="问候长辈鲜花" left-arrow>
+    <van-nav-bar title="问候长辈鲜花" left-arrow @click-left="onClickLeft">
       <van-icon name="service-o" slot="right" />
       <van-icon name="wap-nav" slot="right" />
     </van-nav-bar>
@@ -126,9 +126,15 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  methods: {
+    onClickLeft() {
+      this.$router.go(-1);
+    }
+  }
+};
 </script>
-<style scoped>
+<style>
 .van-nav-bar__right {
   position: absolute;
   bottom: 0.1rem;

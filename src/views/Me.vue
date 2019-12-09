@@ -1,7 +1,7 @@
 <template>
   <div class="me">
-    <van-nav-bar title="个人中心" left-text left-arrow></van-nav-bar>
-    <div class="main">
+    <van-nav-bar title="个人中心" left-text left-arrow @click-left="onClickLeft"></van-nav-bar>
+    <div class="me_main">
       <!-- 登录/注册 -->
       <div class="banner">
         <div class="login">
@@ -60,9 +60,9 @@
         <van-grid>
           <van-grid-item icon="coupon-o" text="优惠券" :to="{name:'Youhui'}" />
           <van-grid-item icon="ecard-pay" text="权益卡" :to="{name:'Quanxian'}" />
-          <van-grid-item icon="after-sale" text="余额" />
-          <van-grid-item icon="gem-o" text="会员积分" />
-          <van-grid-item icon="logistics" text="收货地址" />
+          <van-grid-item icon="after-sale" text="余额" :to="{name:'Yuer'}" />
+          <van-grid-item icon="gem-o" text="会员积分" :to="{name:'Huiyuan'}" />
+          <van-grid-item icon="logistics" text="收货地址" :to="{name:'Shouhuo'}" />
           <van-grid-item icon="volume-o" text="生日纪念提醒" />
           <van-grid-item icon="star-o" text="收藏" />
           <van-grid-item icon="clock-o" text="浏览记录" />
@@ -107,6 +107,10 @@
  <script>
 export default {
   methods: {
+    onClickLeft() {
+      this.$router.go(-1);
+    },
+
     DL() {
       if (localStorage.getItem("token")) {
       } else {
@@ -117,10 +121,10 @@ export default {
     }
   }
 };
-</script> **/
+</script> 
 
 
-<style scoped>
+<style>
 .me {
   background: #e9ecf0;
 }
@@ -244,9 +248,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-* {
-  font-size: 15px;
-}
 body {
   font-family: SourceHanSansCN, -apple-system, Verdana, Arial, Helvetica,
     sans-serif;
@@ -273,7 +274,7 @@ textarea {
   border-radius: 0.28571429rem;
   box-shadow: 0 0.28571429rem 0.42857143rem 0 #dee2e5;
 }
-.main {
+.me_main {
   background: url(https://img02.hua.com/m/member/center/backgroundv3.png)
     no-repeat;
   width: 100%;
