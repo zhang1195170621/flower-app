@@ -924,7 +924,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style>
 .van-tree-select__nav {
   width: 4rem;
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="cart">
-    <van-nav-bar title="购物车" left-text left-arrow></van-nav-bar>
+    <van-nav-bar title="购物车" left-text left-arrow @click-left="onClickLeft"></van-nav-bar>
     <section class="main">
       <div class="emptycart">
         <img class="img" src="https://img02.hua.com/m/images/m_emptycart.png" alt />
@@ -104,7 +104,7 @@
     </section>
   </div>
 </template>
-<style scoped>
+<style>
 .guess-item-price {
   margin-top: 0.42857143rem;
   font-size: 1rem;
@@ -183,3 +183,12 @@ a {
   background: #fff;
 }
 </style>
+<script>
+export default {
+  methods: {
+    onClickLeft() {
+      this.$router.go(-1);
+    }
+  }
+};
+</script>

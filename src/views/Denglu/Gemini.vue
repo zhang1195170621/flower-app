@@ -1,6 +1,6 @@
 <template>
   <div class="gemini">
-    <van-nav-bar title="星座鲜花礼物专题" left-arrow>
+    <van-nav-bar title="星座鲜花礼物专题" left-arrow @click-left="onClickLeft">
       <van-icon name="wap-nav" slot="right" />
     </van-nav-bar>
     <van-tabs @click="onClick">
@@ -2314,13 +2314,17 @@
 <script>
 export default {
   methods: {
+    onClickLeft() {
+      this.$router.go(-1);
+    },
+
     onClick(name, title) {
       this.$toast(title);
     }
   }
 };
 </script>
-<style scoped>
+<style>
 .d_bbsz {
   padding: 8px 24px 8px 16px;
   border-bottom: 8px solid #f5f5f5;

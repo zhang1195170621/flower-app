@@ -1,6 +1,6 @@
 <template>
   <div class="coupon">
-    <van-nav-bar title="优惠券" left-text left-arrow></van-nav-bar>
+    <van-nav-bar title="优惠券" left-text left-arrow @click-left="onClickLeft"></van-nav-bar>
     <van-tabs v-model="active">
       <van-tab title="未使用">
         <div class="empty-item">
@@ -49,6 +49,12 @@
 
 <script>
 export default {
+  methods: {
+    onClickLeft() {
+      this.$router.go(-1);
+    }
+  },
+
   name: "Coupon",
   data() {
     return {
