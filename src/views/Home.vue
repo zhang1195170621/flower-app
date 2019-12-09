@@ -38,7 +38,7 @@
         <i class="van-icon van-icon-checked"></i>3小时送
       </li>
       <li class="conpany-info-item">
-        <i class="van-icon van-icon-checked"></i>最近343165条好评
+        <i class="van-icon van-icon-checked"></i>34315条好评
       </li>
     </ul>
     <van-grid :border="false" :column-num="5">
@@ -135,7 +135,7 @@
           </div>
         </div>
       </div>
-      <van-grid :border="false" :column-num="3">
+      <van-grid :border="false" :column-num="3" class="guo_www">
         <van-grid-item>
           <van-image src="https://img02.hua.com/m/home/img/m_home_category_new2.png" />
           <span class="scene-item-pange">新品来袭</span>
@@ -151,7 +151,7 @@
       </van-grid>
     </section>
     <!-- 送恋人 -->
-    <section class="product">
+    <section class="product guo_www">
       <h3 class="product-title">送恋人/爱情鲜花</h3>
       <div class="product-list" v-for="(item,index) in lianren" :key="index">
         <div class="product-item-horizontal">
@@ -183,7 +183,7 @@
       </div>
     </section>
     <!-- 送长辈 -->
-    <section class="product">
+    <section class="product guo_www">
       <h3 class="product-title">送长辈鲜花</h3>
       <div class="product-list" v-for="(item,index) in lianren" :key="index">
         <div class="product-item-horizontal">
@@ -216,218 +216,159 @@
       </div>
     </section>
     <!-- 永生花 -->
-    <section class="guo_product">
-      <div class="guess">
-        <div class="guess-title">永生花推荐</div>
+    <section>
+      <div class="sy_guess">
+        <h3 class="product-title">永生花推荐</h3>
         <!-- 列表 -->
-        <div class="guess-list">
+        <div class="sy_guess-list">
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
                 <img src="https://img01.hua.com/uploadpic/newpic/1073257.jpg_220x240.jpg" alt />
               </div>
-              <div class="guess-item-detail">
+              <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
-                  <van-tag round type="warning">独创设计</van-tag>
+                  <van-tag round type="warning">节日定制款</van-tag>
+                  <p class="guess-item-name">守护初心口红款礼盒/炽热红</p>
                 </div>
-                <span class="guess-item-name">守护初心口红款礼盒·迪奥</span>
-                <p class="product-item-info-prices">
-                  <strong>¥999</strong>
-                  <s>¥1099</s>
-                </p>
-                <p class="product-item-info-sales">已销售101件</p>
-                <van-icon
-                  name="shopping-cart-o"
-                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
-                />
+                <div class="guess-item-price">￥999</div>
+                <p>已销售104件</p>
+                <i
+                  style="position: absolute;top: 20px;"
+                  class="gouwuche van-icon van-icon-shopping-cart-o"
+                ></i>
               </div>
             </a>
           </div>
-        </div>
-        <div class="guess-list">
-          <div class="guess-item">
-            <a href>
-              <div class="guess-item-img">
-                <img src="https://img01.hua.com/uploadpic/newpic/1073264.jpg_220x240.jpg" alt />
-              </div>
-              <div class="guess-item-detail">
-                <div class="guess-item-info">
-                  <van-tag round type="warning">创意新品</van-tag>
-                </div>
-                <span class="guess-item-name">一鹿(路)有你永生小花</span>
-                <p class="product-item-info-prices">
-                  <strong>¥298</strong>
-                  <s>¥309</s>
-                </p>
-                <p class="product-item-info-sales">已销售71件</p>
-                <van-icon name="cart-o" style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;" />
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="guess">
-        <div class="guess-list">
+
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
                 <img src="https://img01.hua.com/uploadpic/newpic/1073185.jpg_220x240.jpg" alt />
               </div>
-              <div class="guess-item-detail">
+              <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
                   <van-tag round type="warning">畅销</van-tag>
+                  <p class="guess-item-name">我如此爱你-口红款999·专柜正品Dior#999口红＋进口永生玫瑰礼盒</p>
                 </div>
-                <span class="guess-item-name">一鹿(路)有你永生小花</span>
-                <p class="product-item-info-prices">
-                  <strong>¥588</strong>
-                  <s>¥788</s>
-                </p>
-                <p class="product-item-info-sales">已销售6352件</p>
-                <van-icon
-                  name="shopping-cart-o"
-                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
-                />
+                <div class="guess-item-price">￥588</div>
+                <p>已销售6361件</p>
               </div>
             </a>
           </div>
-        </div>
-        <div class="guess-list">
+          <div class="guess-item">
+            <a href>
+              <div class="guess-item-img">
+                <img src="https://img01.hua.com/uploadpic/newpic/1073264.jpg_220x240.jpg" alt />
+              </div>
+              <div class="sy_guess-item-detail">
+                <div class="guess-item-info">
+                  <van-tag round type="warning">创意新品</van-tag>
+                  <p class="guess-item-name">一鹿(路)有你永生花小夜灯·永生花礼盒</p>
+                </div>
+                <div class="guess-item-price">￥298</div>
+                <p>已销售72件</p>
+              </div>
+            </a>
+          </div>
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
                 <img src="https://img01.hua.com/uploadpic/newpic/1073263.jpg_220x240.jpg" alt />
               </div>
-              <div class="guess-item-detail">
+              <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
                   <van-tag round type="warning">创意新品</van-tag>
+                  <p class="guess-item-name">永生花满月艺术台灯/朦胧粉·永生花台灯</p>
                 </div>
-                <span class="guess-item-name">永生花满月艺术台灯</span>
-                <p class="product-item-info-prices">
-                  <strong>¥398</strong>
-                  <s>¥498</s>
-                </p>
-                <p class="product-item-info-sales">已销售73件</p>
-                <van-icon
-                  name="shopping-cart-o"
-                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
-                />
+                <div class="guess-item-price">￥398</div>
+                <p>已销售75件</p>
               </div>
             </a>
           </div>
         </div>
       </div>
-      <div class="bottom_guo">
-        <p class="bottom_guo-btn">查看更多</p>
+      <div class="product-more guo_www">
+        <p class="product-more-btn">查看更多</p>
       </div>
     </section>
-    <!-- 蛋糕推荐 -->
-    <section class="guo_product">
-      <div class="guess">
-        <div class="guess-title">蛋糕推荐</div>
+    <section>
+      <div class="sy_guess">
+        <h3 class="product-title">永生花推荐</h3>
         <!-- 列表 -->
-        <div class="guess-list">
+        <div class="sy_guess-list">
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
-                <img src="https://img01.hua.com/uploadpic/newpic/5602016.jpg_220x240.jpg" alt />
+                <img src="https://img01.hua.com/uploadpic/newpic/1073257.jpg_220x240.jpg" alt />
               </div>
-              <div class="guess-item-detail">
+              <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
-                  <van-tag round type="warning">生日推荐</van-tag>
+                  <van-tag round type="warning">节日定制款</van-tag>
+                  <p class="guess-item-name">守护初心口红款礼盒/炽热红</p>
                 </div>
-                <span class="guess-item-name">四重奏蛋糕(约2磅)</span>
-                <p class="product-item-info-prices">
-                  <strong>¥228</strong>
-                  <s>¥296</s>
-                </p>
-                <p class="product-item-info-sales">已销售2703件</p>
-                <van-icon
-                  name="shopping-cart-o"
-                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
-                />
+                <div class="guess-item-price">￥999</div>
+                <p>已销售104件</p>
+                <i
+                  style="position: absolute;top: 20px;"
+                  class="gouwuche van-icon van-icon-shopping-cart-o"
+                ></i>
               </div>
             </a>
           </div>
-        </div>
-        <div class="guess-list">
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
-                <img src="https://img01.hua.com/uploadpic/newpic/9092114.jpg_220x240.jpg" alt />
+                <img src="https://img01.hua.com/uploadpic/newpic/1073185.jpg_220x240.jpg" alt />
               </div>
-              <div class="guess-item-detail">
+              <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
-                  <van-tag round type="warning">真爱蛋糕</van-tag>
+                  <van-tag round type="warning">畅销</van-tag>
+                  <p class="guess-item-name">我如此爱你-口红款999·专柜正品Dior#999口红＋进口永生玫瑰礼盒</p>
                 </div>
-                <span class="guess-item-name">真爱+生日蛋糕B款(8寸)</span>
-                <p class="product-item-info-prices">
-                  <strong>¥268</strong>
-                  <s>¥298</s>
-                </p>
-                <p class="product-item-info-sales">已销售1045件</p>
-                <van-icon
-                  name="shopping-cart-o"
-                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
-                />
+                <div class="guess-item-price">￥588</div>
+                <p>已销售6361件</p>
               </div>
             </a>
           </div>
-        </div>
-      </div>
-      <div class="guess">
-        <div class="guess-list">
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
-                <img src="https://img01.hua.com/uploadpic/newpic/5010023.jpg_220x240.jpg" alt />
+                <img src="https://img01.hua.com/uploadpic/newpic/1073264.jpg_220x240.jpg" alt />
               </div>
-              <div class="guess-item-detail">
+              <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
-                  <van-tag round type="warning">销量冠军</van-tag>
+                  <van-tag round type="warning">创意新品</van-tag>
+                  <p class="guess-item-name">一鹿(路)有你永生花小夜灯·永生花礼盒</p>
                 </div>
-                <span class="guess-item-name">生日蛋糕A8寸(2磅)心形</span>
-                <p class="product-item-info-prices">
-                  <strong>¥178</strong>
-                  <s>¥188</s>
-                </p>
-                <p class="product-item-info-sales">已销售2.1万件</p>
-                <van-icon
-                  name="shopping-cart-o"
-                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
-                />
+                <div class="guess-item-price">￥298</div>
+                <p>已销售72件</p>
               </div>
             </a>
           </div>
-        </div>
-        <div class="guess-list">
+
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
-                <img src="https://img01.hua.com/uploadpic/newpic/5602045.jpg_220x240.jpg" alt />
+                <img src="https://img01.hua.com/uploadpic/newpic/1073263.jpg_220x240.jpg" alt />
               </div>
-              <div class="guess-item-detail">
+              <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
-                  <van-tag round type="warning">推荐</van-tag>
+                  <van-tag round type="warning">创意新品</van-tag>
+                  <p class="guess-item-name">永生花满月艺术台灯/朦胧粉·永生花台灯</p>
                 </div>
-                <span class="guess-item-name">浪漫果粉蛋糕(约2磅)</span>
-                <p class="product-item-info-prices">
-                  <strong>¥218</strong>
-                  <s>¥336</s>
-                </p>
-                <p class="product-item-info-sales">已销售1175件</p>
-                <van-icon
-                  name="shopping-cart-o"
-                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
-                />
+                <div class="guess-item-price">￥398</div>
+                <p>已销售75件</p>
               </div>
             </a>
           </div>
         </div>
       </div>
-      <div class="bottom_guo">
-        <p class="bottom_guo-btn">查看更多</p>
+      <div class="product-more">
+        <p class="product-more-btn">查看更多</p>
       </div>
     </section>
+
     <section class="qiyetuangou">
       <img src="https://img02.hua.com/m/home/img/m_home_qiyetuangou.png" alt />
     </section>
@@ -485,7 +426,7 @@
       </div>
       <div class="footer-entry">
         <div class="footer-left">
-          <van-icon name="records" style="left:0.6rem" />
+          <van-icon name="records" style="left:0.6rem;" size="12px;" />
           <p style="font-size:0.6rem">客户端</p>
         </div>
         <div class="footer-right">
@@ -592,6 +533,9 @@ export default {
 };
 </script>
 <style scoped>
+.guo_www {
+  border-bottom: solid 0.4rem #e9ecf0;
+}
 .ggg-flower {
   max-width: 2.4rem;
 }
@@ -606,6 +550,7 @@ export default {
 .hhh-left {
   margin-left: 1rem;
   font-size: 1.46rem;
+  color: #fff;
 }
 .hhh-right {
   margin-right: 1rem;
@@ -639,7 +584,7 @@ bt {
   vertical-align: middle;
 }
 .conpany-info {
-  display: flex;
+  display: -webkit-box;
   justify-content: center;
   align-items: center;
   height: 1.8rem;
@@ -820,10 +765,10 @@ bt {
   padding-bottom: 1.42857143rem;
 }
 .product-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: center;
   font-weight: normal;
-  margin-bottom: 1rem;
+  margin: 1.5rem;
 }
 .product-list {
   padding: 0 0.5rem 0.2rem;
@@ -892,7 +837,7 @@ bt {
 }
 .product-more-btn {
   display: block;
-  margin: 0 auto;
+  margin: 1.8rem auto 0.8rem;
   font-size: 0.7rem;
   border: 1px solid #232628;
   width: 6rem;
@@ -900,9 +845,12 @@ bt {
   line-height: 1.6rem;
   text-align: center;
   border-radius: 0.14285714rem;
-  margin-top: 0.8rem;
 }
-.guess-title {
+.sy_guess-item-detail {
+  height: 6.5rem;
+  padding: 0.42857143rem 0.57142857rem;
+}
+/* .guo_guess-title {
   text-align: center;
   height: 3.6rem;
   font-size: 1rem;
@@ -915,28 +863,25 @@ bt {
   background: #fff;
 }
 
-.guess-item-price {
+.guo_guess-item-price {
   margin-top: 0.42857143rem;
   font-size: 1rem;
   color: #ff734c;
 }
-.guess-item-name {
+.guo_guess-item-name {
   white-space: nowrap;
   font-size: 0.85714286rem;
   color: #232628;
 }
-.guess-item-info {
+.guo_uess-item-info {
   font-size: 0.85714286rem;
   color: #232628;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.guess-item-detail {
-  height: 6rem;
-  padding: 0.42857143rem 0.57142857rem;
-}
-.guess-item-img img {
+
+.guo_guess-item-img img {
   width: 100%;
   vertical-align: middle;
 }
@@ -952,18 +897,18 @@ a {
   overflow: hidden;
   box-shadow: 0px 4px 6px 0px #dee2e5;
 }
-.guess-list {
+.guo_guess-list {
   font-size: 0;
   padding: 0 1.2%;
 }
-.guess-title {
+.guo_guess-title {
   height: 4rem;
   font-size: 1.14285714rem;
   color: #232628;
   padding: 0 1.14285714rem;
   line-height: 4rem;
-}
-.guess {
+}*/
+.sy_guess {
   margin-top: 0.57142857rem;
   background-color: #fff;
   overflow: hidden;
@@ -992,7 +937,7 @@ a {
   line-height: 3.14285714rem;
   background: #fff;
 }
-.guess-item-name[data-v-fae5bece] {
+.guo_guess-item-name[data-v-fae5bece] {
   white-space: nowrap;
   font-size: 0.85714286rem;
   color: #232628;
