@@ -13,8 +13,6 @@ import De from '../views/denglu/Elder.vue';
 
 
 
-
-
 import index from '../views/index.vue'
 import DGemini from '../views/denglu/Gemini.vue';
 

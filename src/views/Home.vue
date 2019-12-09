@@ -1,9 +1,11 @@
 <template>
   <div class="home">
     <header class="headerbar">
-      <div class="header-left">
-        <i class="hhh-left van-icon van-icon-bars"></i>
-      </div>
+      <router-link :to="{name:'Fl'}">
+        <div class="header-left">
+          <i class="hhh-left van-icon van-icon-bars"></i>
+        </div>
+      </router-link>
       <div class="header-logo">
         <img src="https://m.hua.com/content/vue/login/static/img/m_hualogo.png" alt />
       </div>
@@ -41,39 +43,50 @@
     </ul>
     <van-grid :border="false" :column-num="5">
       <van-grid-item class="flower">
-        <van-image
-          class="ggg-flower"
-          src="https://img02.hua.com/m/home/img/m_home_category_flower.png"
-        />
-        <P>鲜花</P>
+        <router-link :to="{path:'/e'}">
+          <van-image
+            class="ggg-flower"
+            src="https://img02.hua.com/m/home/img/m_home_category_flower.png"
+          />
+          <p>鲜花</p>
+        </router-link>
+      </van-grid-item>
+
+      <van-grid-item class="flower">
+        <router-link :to="{path:'/e'}">
+          <van-image
+            class="ggg-flower"
+            src="https://img02.hua.com/m/home/img/m_home_category_ppf.png"
+          />
+          <p>永生花</p>
+        </router-link>
       </van-grid-item>
       <van-grid-item class="flower">
-        <van-image
-          class="ggg-flower"
-          src="https://img02.hua.com/m/home/img/m_home_category_ppf.png"
-        />
-        <p>永生花</p>
+        <router-link :to="{path:'/e'}">
+          <van-image
+            class="ggg-flower"
+            src="https://img02.hua.com/m/home/img/m_home_category_cake.png"
+          />
+          <p>蛋糕</p>
+        </router-link>
       </van-grid-item>
       <van-grid-item class="flower">
-        <van-image
-          class="ggg-flower"
-          src="https://img02.hua.com/m/home/img/m_home_category_cake.png"
-        />
-        <p>蛋糕</p>
+        <router-link :to="{path:'/e'}">
+          <van-image
+            class="ggg-flower"
+            src="https://img02.hua.com/m/home/img/m_home_category_gift.png"
+          />
+          <p>礼品</p>
+        </router-link>
       </van-grid-item>
       <van-grid-item class="flower">
-        <van-image
-          class="ggg-flower"
-          src="https://img02.hua.com/m/home/img/m_home_category_gift.png"
-        />
-        <p>礼品</p>
-      </van-grid-item>
-      <van-grid-item class="flower">
-        <van-image
-          class="ggg-flower"
-          src="https://img02.hua.com/m/home/img/m_home_category_chocolate.png"
-        />
-        <p>巧克力</p>
+        <router-link :to="{path:'/e'}">
+          <van-image
+            class="ggg-flower"
+            src="https://img02.hua.com/m/home/img/m_home_category_chocolate.png"
+          />
+          <p>巧克力</p>
+        </router-link>
       </van-grid-item>
     </van-grid>
     <section class="scene">
@@ -140,191 +153,26 @@
     <!-- 送恋人 -->
     <section class="product">
       <h3 class="product-title">送恋人/爱情鲜花</h3>
-      <div class="product-list">
+      <div class="product-list" v-for="(item,index) in lianren" :key="index">
         <div class="product-item-horizontal">
           <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg" alt="一往情深" />
+            <img :src="item.image" alt="一往情深" />
           </div>
           <div class="product-item-info">
-            <span class="text-overflow">一往情深</span>
-            <p class="text-overflow-line2">精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</p>
+            <span class="text-overflow">{{item.title}}</span>
+            <p class="text-overflow-line2">{{item.xq}}</p>
             <div class="product-item-info-promo">经典爆款，年销售冠军！</div>
             <div class="product-item-info-bottom">
               <div class="product-item-info-bottom-left">
                 <p class="product-item-info-prices">
-                  <strong>¥239</strong>
-                  <s>¥315</s>
+                  <strong>¥{{item.price}}</strong>
+                  <s>¥{{item.oldPrcice}}</s>
                 </p>
-                <p class="product-item-info-sales">已销售7.5万件</p>
-                <i class="gouwuche van-icon van-icon-shopping-cart-o"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <div class="product-item-horizontal">
-          <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9010011.jpg_220x240.jpg" alt="一心一意" />
-          </div>
-          <div class="product-item-info">
-            <span class="text-overflow">一心一意</span>
-            <p class="text-overflow-line2">玫瑰11枝，粉色勿忘我</p>
-            <van-tag round type="warning">畅销爆款</van-tag>
-            <div class="product-item-info-promo">经典款式 精选爆款</div>
-            <div class="product-item-info-bottom">
-              <div class="product-item-info-bottom-left">
-                <p class="product-item-info-prices">
-                  <strong>¥139</strong>
-                  <s>¥189</s>
-                </p>
-                <p class="product-item-info-sales">已销售11.1万件</p>
-                <i class="gouwuche van-icon van-icon-shopping-cart-o"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <div class="product-item-horizontal">
-          <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9010855.jpg_220x240.jpg" alt="用心爱你" />
-          </div>
-          <div class="product-item-info">
-            <span class="text-overflow">用心爱你</span>
-            <p class="text-overflow-line2">99枝:33枝戴安娜+66枝红玫瑰</p>
-            <div class="product-item-info-promo">与你相守知道天荒地啦</div>
-            <div class="product-item-info-bottom">
-              <div class="product-item-info-bottom-left">
-                <p class="product-item-info-prices">
-                  <strong>¥520</strong>
-                  <s>¥869</s>
-                </p>
-                <p class="product-item-info-sales">已销售3.3万件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <div class="product-item-horizontal">
-          <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9012009.jpg_220x240.jpg" alt="勿忘巴黎" />
-          </div>
-          <div class="product-item-info">
-            <span class="text-overflow">勿忘巴黎</span>
-            <p class="text-overflow-line2">33枝红玫瑰</p>
-            <van-tag round type="warning">畅销爆款</van-tag>
-            <div class="product-item-info-promo">浪漫唯美，女神挚爱</div>
-            <div class="product-item-info-bottom">
-              <div class="product-item-info-bottom-left">
-                <p class="product-item-info-prices">
-                  <strong>¥298</strong>
-                  <s>¥382</s>
-                </p>
-                <p class="product-item-info-sales">已销售6.5万件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <div class="product-item-horizontal">
-          <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9012437.jpg_220x240.jpg" alt="粉雪佳人" />
-          </div>
-          <div class="product-item-info">
-            <span class="text-overflow">粉雪佳人</span>
-            <p class="text-overflow-line2">戴安娜玫瑰11枝，百合花2枝</p>
-            <div class="product-item-info-promo">清新典雅，至臻设计</div>
-            <div class="product-item-info-bottom">
-              <div class="product-item-info-bottom-left">
-                <p class="product-item-info-prices">
-                  <strong>¥219</strong>
-                  <s>¥282</s>
-                </p>
-                <p class="product-item-info-sales">已销售1433件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <div class="product-item-horizontal">
-          <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9012177.jpg_220x240.jpg" alt="不变的承诺" />
-          </div>
-          <div class="product-item-info">
-            <span class="text-overflow">不変的承诺</span>
-            <p class="text-overflow-line2">99枝红玫瑰</p>
-            <div class="product-item-info-promo">经典99枝，鼎力推荐！</div>
-            <div class="product-item-info-bottom">
-              <div class="product-item-info-bottom-left">
-                <p class="product-item-info-prices">
-                  <strong>¥539</strong>
-                  <s>¥766</s>
-                </p>
-                <p class="product-item-info-sales">已销售6.2万件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <div class="product-item-horizontal">
-          <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9012089.jpg_220x240.jpg" alt="爱在心头" />
-          </div>
-          <div class="product-item-info">
-            <span class="text-overflow">爱在心头</span>
-            <p class="text-overflow-line2">玫瑰50枝：戴安娜粉玫瑰19枝</p>
-            <div class="product-item-info-promo">上色搭配 赏心悦目</div>
-            <div class="product-item-info-bottom">
-              <div class="product-item-info-bottom-left">
-                <p class="product-item-info-prices">
-                  <strong>¥389</strong>
-                  <s>¥479</s>
-                </p>
-                <p class="product-item-info-sales">已销售1.9万件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <div class="product-item-horizontal">
-          <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9012154.jpg_220x240.jpg" alt="甜美公主" />
-          </div>
-          <div class="product-item-info">
-            <span class="text-overflow">甜美公主</span>
-            <p class="text-overflow-line2">白玫瑰22枝，粉佳人粉玫瑰14枝</p>
-            <div class="product-item-info-promo">甜美设计 清新典雅</div>
-            <div class="product-item-info-bottom">
-              <div class="product-item-info-bottom-left">
-                <p class="product-item-info-prices">
-                  <strong>¥368</strong>
-                  <s>¥485</s>
-                </p>
-                <p class="product-item-info-sales">已销售2.2万件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
+                <p class="product-item-info-sales">已销售{{item.ys}}万件</p>
+                <i
+                  style="position: absolute;top: 20px;"
+                  class="gouwuche van-icon van-icon-shopping-cart-o"
+                ></i>
               </div>
             </div>
           </div>
@@ -337,150 +185,27 @@
     <!-- 送长辈 -->
     <section class="product">
       <h3 class="product-title">送长辈鲜花</h3>
-      <div class="product-list">
+      <div class="product-list" v-for="(item,index) in lianren" :key="index">
         <div class="product-item-horizontal">
           <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9012440.jpg_220x240.jpg" alt="星河璀璨" />
+            <img :src="item.image" alt="星河璀璨" />
           </div>
           <div class="product-item-info">
-            <span class="text-overflow">星河璀璨</span>
-            <p class="text-overflow-line2">香槟玫瑰9枝</p>
+            <span class="text-overflow">{{item.titile}}</span>
+            <p class="text-overflow-line2">{{item.xq}}</p>
             <van-tag round type="warning">节日定制款</van-tag>
             <div class="product-item-info-promo">倾情设计，唯爱相守</div>
             <div class="product-item-info-bottom">
               <div class="product-item-info-bottom-left">
                 <p class="product-item-info-prices">
-                  <strong>¥289</strong>
-                  <s>¥376</s>
+                  <strong>¥{{item.price}}</strong>
+                  <s>¥{{item.oldPrcice}}</s>
                 </p>
-                <p class="product-item-info-sales">已销售808件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <div class="product-item-horizontal">
-          <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9012441.jpg_220x240.jpg" alt="语笑嫣然" />
-          </div>
-          <div class="product-item-info">
-            <span class="text-overflow">语笑嫣然</span>
-            <p class="text-overflow-line2">粉佳人玫瑰9枝</p>
-            <van-tag round type="warning">节日定制款</van-tag>
-            <div class="product-item-info-promo">温柔相伴，笑容常在</div>
-            <div class="product-item-info-bottom">
-              <div class="product-item-info-bottom-left">
-                <p class="product-item-info-prices">
-                  <strong>¥198</strong>
-                  <s>¥256</s>
-                </p>
-                <p class="product-item-info-sales">已销售1477件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <div class="product-item-horizontal">
-          <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9012332.jpg_220x240.jpg" alt="留住好时光" />
-          </div>
-          <div class="product-item-info">
-            <span class="text-overflow">留住好时光</span>
-            <p class="text-overflow-line2">粉绣球1枝，粉雪山玫瑰</p>
-            <van-tag round type="warning">热卖推荐</van-tag>
-            <div class="product-item-info-promo">精选昆明A级花材</div>
-            <div class="product-item-info-bottom">
-              <div class="product-item-info-bottom-left">
-                <p class="product-item-info-prices">
-                  <strong>¥239</strong>
-                  <s>¥306</s>
-                </p>
-                <p class="product-item-info-sales">已销售8616件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <div class="product-item-horizontal">
-          <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9012092.jpg_220x240.jpg" alt="母爱" />
-          </div>
-          <div class="product-item-info">
-            <span class="text-overflow">母爱</span>
-            <p class="text-overflow-line2">紫红色康乃馨9枝</p>
-            <van-tag round type="warning">母亲最爱</van-tag>
-            <div class="product-item-info-promo">红粉搭配 花色明艳</div>
-            <div class="product-item-info-bottom">
-              <div class="product-item-info-bottom-left">
-                <p class="product-item-info-prices">
-                  <strong>¥172</strong>
-                  <s>¥228</s>
-                </p>
-                <p class="product-item-info-sales">已销售1.5万件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <div class="product-item-horizontal">
-          <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9012201.jpg_220x240.jpg" alt="戴情无限" />
-          </div>
-          <div class="product-item-info">
-            <span class="text-overflow">戴情无限</span>
-            <p class="text-overflow-line2">戴安娜玫瑰11枝</p>
-            <van-tag round type="warning">畅销单品</van-tag>
-            <div class="product-item-info-promo">高端花盒设计</div>
-            <div class="product-item-info-bottom">
-              <div class="product-item-info-bottom-left">
-                <p class="product-item-info-prices">
-                  <strong>¥238</strong>
-                  <s>¥312</s>
-                </p>
-                <p class="product-item-info-sales">已销售6055件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-list">
-        <div class="product-item-horizontal">
-          <div class="product-item-pic">
-            <img src="https://img01.hua.com/uploadpic/newpic/9012204.jpg_220x240.jpg" alt="幸福万年长" />
-          </div>
-          <div class="product-item-info">
-            <span class="text-overflow">幸福万年长</span>
-            <p class="text-overflow-line2">红色康乃馨66枝</p>
-            <div class="product-item-info-promo">温暖花束 幸福万年长</div>
-            <div class="product-item-info-bottom">
-              <div class="product-item-info-bottom-left">
-                <p class="product-item-info-prices">
-                  <strong>¥338</strong>
-                  <s>¥486</s>
-                </p>
-                <p class="product-item-info-sales">已销售3458件</p>
-              </div>
-              <div class="product-item-info-bottom-right">
-                <i class="iconfont iconfont-buy"></i>
+                <p class="product-item-info-sales">已销售{{item.ys}}万件</p>
+                <i
+                  style="position: absolute;top: 20px;"
+                  class="gouwuche van-icon van-icon-shopping-cart-o"
+                ></i>
               </div>
             </div>
           </div>
@@ -511,6 +236,10 @@
                   <s>¥1099</s>
                 </p>
                 <p class="product-item-info-sales">已销售101件</p>
+                <van-icon
+                  name="shopping-cart-o"
+                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
+                />
               </div>
             </a>
           </div>
@@ -531,6 +260,7 @@
                   <s>¥309</s>
                 </p>
                 <p class="product-item-info-sales">已销售71件</p>
+                <van-icon name="cart-o" style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;" />
               </div>
             </a>
           </div>
@@ -553,6 +283,10 @@
                   <s>¥788</s>
                 </p>
                 <p class="product-item-info-sales">已销售6352件</p>
+                <van-icon
+                  name="shopping-cart-o"
+                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
+                />
               </div>
             </a>
           </div>
@@ -573,6 +307,10 @@
                   <s>¥498</s>
                 </p>
                 <p class="product-item-info-sales">已销售73件</p>
+                <van-icon
+                  name="shopping-cart-o"
+                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
+                />
               </div>
             </a>
           </div>
@@ -603,6 +341,10 @@
                   <s>¥296</s>
                 </p>
                 <p class="product-item-info-sales">已销售2703件</p>
+                <van-icon
+                  name="shopping-cart-o"
+                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
+                />
               </div>
             </a>
           </div>
@@ -617,12 +359,16 @@
                 <div class="guess-item-info">
                   <van-tag round type="warning">真爱蛋糕</van-tag>
                 </div>
-                <span class="guess-item-name">真爱+生日蛋糕B款(8寸)红玫瑰9枝</span>
+                <span class="guess-item-name">真爱+生日蛋糕B款(8寸)</span>
                 <p class="product-item-info-prices">
                   <strong>¥268</strong>
                   <s>¥298</s>
                 </p>
                 <p class="product-item-info-sales">已销售1045件</p>
+                <van-icon
+                  name="shopping-cart-o"
+                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
+                />
               </div>
             </a>
           </div>
@@ -639,12 +385,16 @@
                 <div class="guess-item-info">
                   <van-tag round type="warning">销量冠军</van-tag>
                 </div>
-                <span class="guess-item-name">生日蛋糕A8寸(2磅)心形水果鲜奶蛋糕</span>
+                <span class="guess-item-name">生日蛋糕A8寸(2磅)心形</span>
                 <p class="product-item-info-prices">
                   <strong>¥178</strong>
                   <s>¥188</s>
                 </p>
                 <p class="product-item-info-sales">已销售2.1万件</p>
+                <van-icon
+                  name="shopping-cart-o"
+                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
+                />
               </div>
             </a>
           </div>
@@ -659,12 +409,16 @@
                 <div class="guess-item-info">
                   <van-tag round type="warning">推荐</van-tag>
                 </div>
-                <span class="guess-item-name">浪漫果粉蛋糕(约2磅)水果蛋糕</span>
+                <span class="guess-item-name">浪漫果粉蛋糕(约2磅)</span>
                 <p class="product-item-info-prices">
                   <strong>¥218</strong>
                   <s>¥336</s>
                 </p>
                 <p class="product-item-info-sales">已销售1175件</p>
+                <van-icon
+                  name="shopping-cart-o"
+                  style="font-size: 1.125rem;left: 8rem;bottom: 1.4rem;"
+                />
               </div>
             </a>
           </div>
@@ -731,10 +485,12 @@
       </div>
       <div class="footer-entry">
         <div class="footer-left">
-          <p>客户端</p>
+          <van-icon name="records" style="left:0.6rem" />
+          <p style="font-size:0.6rem">客户端</p>
         </div>
         <div class="footer-right">
-          <p>客服</p>
+          <van-icon name="service-o" style="left:0.2rem" />
+          <p style="font-size:0.6rem">客服</p>
         </div>
       </div>
       <p class="footer-copyright">
@@ -748,7 +504,92 @@
 
 <script>
 // @ is an alias to /src
-export default {};
+export default {
+  data() {
+    return {
+      lianren: [
+        {
+          image:
+            "https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg",
+          title: "一往情深",
+          xq: "精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎",
+          price: 239,
+          oldPrice: 315,
+          ys: 7.5
+        },
+        {
+          image:
+            "https://img01.hua.com/uploadpic/newpic/9010011.jpg_220x240.jpg",
+          title: "一心一意",
+          xq: "玫瑰11枝，粉色勿忘我",
+          price: 139,
+          oldPrice: 189,
+          ys: 11.1
+        },
+        {
+          image:
+            "https://img01.hua.com/uploadpic/newpic/9010855.jpg_220x240.jpg",
+          title: "用心爱你",
+          xq: "99枝：33枝戴安娜+66枝红玫瑰",
+          price: 520,
+          oldPrice: 869,
+          ys: 3.3
+        },
+        {
+          image:
+            "https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg",
+          title: "一往情深",
+          xq: "aaaa:19枝红玫瑰，勿忘我0.1扎",
+          price: 239,
+          oldPrice: 315,
+          ys: 7.5
+        },
+        {
+          image:
+            "https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg",
+          title: "一往情深",
+          xq: "aaaa:19枝红玫瑰，勿忘我0.1扎",
+          price: 239,
+          oldPrice: 315,
+          ys: 7.5
+        },
+        {
+          image:
+            "https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg",
+          title: "一往情深",
+          xq: "aaaa:19枝红玫瑰，勿忘我0.1扎",
+          price: 239,
+          oldPrice: 315,
+          ys: 7.5
+        },
+        {
+          image:
+            "https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg",
+          title: "一往情深",
+          xq: "aaaa:19枝红玫瑰，勿忘我0.1扎",
+          price: 239,
+          oldPrice: 315,
+          ys: 7.5
+        },
+        {
+          image:
+            "https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg",
+          title: "一往情深",
+          xq: "aaaa:19枝红玫瑰，勿忘我0.1扎",
+          price: 239,
+          oldPrice: 315,
+          ys: 7.5
+        }
+      ],
+      show: false
+    };
+  },
+  methods: {
+    aaa() {
+      this.show = !this.show;
+    }
+  }
+};
 </script>
 <style scoped>
 .ggg-flower {
@@ -821,7 +662,7 @@ bt {
 }
 .flower p {
   font-size: 0.666rem;
-  margin-top: 0.1rem;
+  text-align: center;
 }
 .scene .scene-one {
   margin-left: 1rem;
@@ -889,7 +730,7 @@ bt {
 .guo_sell_left .r {
   position: absolute;
   left: 1.2rem;
-  top: 0.2rem;
+  top: 0.6rem;
   font-size: 0.92rem;
 }
 .guo_sell_left .j {
@@ -927,7 +768,7 @@ bt {
 .guo_sell_right .guo_t {
   position: absolute;
   left: 12.6rem;
-  top: 0.2rem;
+  top: 0.6rem;
   font-size: 0.92rem;
 }
 .guo_sell_right .guo_c {
@@ -980,9 +821,9 @@ bt {
 }
 .product-title {
   font-size: 1.1rem;
-  padding: -5rem 0;
   text-align: center;
   font-weight: normal;
+  margin-bottom: 1rem;
 }
 .product-list {
   padding: 0 0.5rem 0.2rem;
@@ -1022,6 +863,7 @@ bt {
   font-weight: 500;
 }
 .product-item-info-bottom {
+  position: relative;
   margin-top: 1.8rem;
 }
 .product-item-info-prices {
@@ -1175,6 +1017,7 @@ a {
   font-size: 1.14285714rem;
   text-align: center;
   font-weight: normal;
+  margin: 1.5rem;
 }
 .brand-item {
   float: left;
@@ -1224,6 +1067,7 @@ a {
   text-align: center;
 }
 .footer-entry {
+  margin-top: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
