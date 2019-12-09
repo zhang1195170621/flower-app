@@ -271,7 +271,6 @@
               </div>
             </a>
           </div>
-
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
@@ -293,7 +292,6 @@
         <p class="product-more-btn">查看更多</p>
       </div>
     </section>
-
     <section>
       <div class="sy_guess">
         <h3 class="product-title">永生花推荐</h3>
@@ -318,7 +316,6 @@
               </div>
             </a>
           </div>
-
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
