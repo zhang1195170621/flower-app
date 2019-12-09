@@ -14,8 +14,8 @@
             <van-grid-item :to="{name:'DDL'}">
               <van-image
                 round
-                max-width="3.5rem"
-                max-height="3.5rem"
+                max-width="2rem"
+                max-height="2rem"
                 src="https://img02.hua.com/m/category/Classification/m_category_hot_Lover.png"
               />
               <van-grid-item text="送恋人鲜花" />
@@ -23,8 +23,8 @@
             <van-grid-item :to="{name:'DE'}">
               <van-image
                 round
-                max-width="4rem"
-                max-height="4rem"
+                max-width="2rem"
+                max-height="2rem"
                 src="https://img02.hua.com/m/category/Classification/m_category_hot_Elder.png"
               />
               <van-grid-item text="送长辈鲜花" />
@@ -32,8 +32,8 @@
             <van-grid-item :to="{name:'DH'}">
               <van-image
                 round
-                max-width="4rem"
-                max-height="4rem"
+                max-width="2rem"
+                max-height="2rem"
                 src="https://img02.hua.com/m/category/Classification/m_category_hot_Birthday.png"
               />
               <van-grid-item text="生日鲜花" />
@@ -44,8 +44,8 @@
             <van-grid-item :to="{name:'DGemini'}">
               <van-image
                 round
-                max-width="4rem"
-                max-height="4rem"
+                max-width="2rem"
+                max-height="2rem"
                 src="https://img02.hua.com/m/category/Classification/m_category_hot_Boxedflowers.png"
                 alt="星座鲜花"
               />
@@ -54,8 +54,8 @@
             <van-grid-item>
               <van-image
                 round
-                max-width="4rem"
-                max-height="4rem"
+                max-width="2rem"
+                max-height="2rem"
                 src="https://img02.hua.com/m/category/Classification/m_category_hot_PPF.png"
                 alt="永生花"
               />
@@ -64,8 +64,8 @@
             <van-grid-item>
               <van-image
                 round
-                max-width="4rem"
-                max-height="4rem"
+                max-width="2rem"
+                max-height="2rem"
                 src="https://img02.hua.com/m/category/Classification/m_category_hot_Cake.png"
                 alt="蛋糕"
               />
@@ -77,8 +77,8 @@
             <van-grid-item>
               <van-image
                 round
-                max-width="4rem"
-                max-height="4rem"
+                max-width="2rem"
+                max-height="2rem"
                 src="https://img02.hua.com/m/category/Classification/m_category_hot_Cake_ganso.png"
                 alt="元祖蛋糕"
               />
@@ -87,8 +87,8 @@
             <van-grid-item>
               <van-image
                 round
-                max-width="4rem"
-                max-height="4rem"
+                max-width="2rem"
+                max-height="2rem"
                 src="https://img02.hua.com/m/category/Classification/m_category_hot_Goldfoilflower.png"
                 alt="金箔花"
               />
@@ -97,8 +97,8 @@
             <van-grid-item>
               <van-image
                 round
-                max-width="4rem"
-                max-height="4rem"
+                max-width="2rem"
+                max-height="2rem"
                 src="https://img02.hua.com/m/category/Classification/m_category_hot_Jewelry.png"
                 alt="首饰"
               />
@@ -110,8 +110,8 @@
             <van-grid-item>
               <van-image
                 round
-                max-width="4rem"
-                max-height="4rem"
+                max-width="2rem"
+                max-height="2rem"
                 src="https://img02.hua.com/m/category/Classification/m_category_hot_Chocolate_qiaoluo.png"
                 alt="巧罗巧克力"
               />
@@ -120,8 +120,8 @@
             <van-grid-item>
               <van-image
                 round
-                max-width="4rem"
-                max-height="4rem"
+                max-width="2rem"
+                max-height="2rem"
                 src="https://img02.hua.com/m/category/Classification/m_category_hot_CreativeGifts.png"
                 alt="创意礼品"
               />
@@ -130,8 +130,8 @@
             <van-grid-item>
               <van-image
                 round
-                max-width="4rem"
-                max-height="4rem"
+                max-width="2rem"
+                max-height="2rem"
                 src="https://img02.hua.com/m/category/Classification/m_category_hot_Groupbuy.png"
                 alt="企业团购"
               />
