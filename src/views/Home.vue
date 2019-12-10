@@ -169,10 +169,12 @@
                   <s>¥{{item.oldPrcice}}</s>
                 </p>
                 <p class="product-item-info-sales">已销售{{item.ys}}万件</p>
-                <i
-                  style="position: absolute;top: 20px;"
-                  class="gouwuche van-icon van-icon-shopping-cart-o"
-                ></i>
+                <p @click="aaa(item,$event)">
+                  <i
+                    style="position: absolute;top: 20px;"
+                    class="gouwuche van-icon van-icon-shopping-cart-o"
+                  ></i>
+                </p>
               </div>
             </div>
           </div>
@@ -202,10 +204,12 @@
                   <s>¥{{item.oldPrcice}}</s>
                 </p>
                 <p class="product-item-info-sales">已销售{{item.ys}}万件</p>
-                <i
-                  style="position: absolute;top: 20px;"
-                  class="gouwuche van-icon van-icon-shopping-cart-o"
-                ></i>
+                <p @click="aaa(item,$event)">
+                  <i
+                    style="position: absolute;top: 20px;"
+                    class="gouwuche van-icon van-icon-shopping-cart-o"
+                  ></i>
+                </p>
               </div>
             </div>
           </div>
@@ -233,10 +237,12 @@
                 </div>
                 <div class="guess-item-price">￥999</div>
                 <p>已销售104件</p>
-                <i
-                  style="position: absolute;top: 20px;"
-                  class="gouwuche van-icon van-icon-shopping-cart-o"
-                ></i>
+                <p @click="aaa(item,$event)">
+                  <i
+                    style="position: absolute;top: 20px;"
+                    class="gouwuche van-icon van-icon-shopping-cart-o"
+                  ></i>
+                </p>
               </div>
             </a>
           </div>
@@ -526,8 +532,64 @@ export default {
     };
   },
   methods: {
-    aaa() {
+    /* aaa() {
       this.show = !this.show;
+    }, */
+    aaa: function(item, $event) {
+      var start = $event.currentTarget;
+      var gwc = document.querySelectorAll(
+        ".van-tabbar-item__icon .van-icon "
+      )[2];
+      var img = item.image;
+      this.parabola(start, gwc, img);
+    },
+    parabola(startEle, endEle, image) {
+      let _this = this;
+      let start = startEle,
+        end = endEle;
+      //获取坐标
+      let startPoint = start.getBoundingClientRect(),
+        startX = startPoint.left,
+        startY = startPoint.top;
+      let endPoint = end.getBoundingClientRect(),
+        endX = endPoint.left - startX,
+        endY = startY - endPoint.top;
+      //
+      let x1 = endX > 0 ? 10 : -10,
+        y1 = endY > 0 ? 0.05 : -0.005;
+      //根据坐标计算出抛物线方程式的a,b,c值，由于我们把坐标系平移到起点坐标，所以c值为0
+      let a = (x1 * endY - y1 * endX) / (endX * endX * x1 - x1 * x1 * endX),
+        b = (y1 - a * x1 * x1) / x1;
+      startEle = endEle = startPoint = endPoint = null;
+      //创建小球
+      function createBall() {
+        var ball = new Image();
+        ball.src = image;
+        //小球样式
+        ball.style =
+          "position: fixed;width: 20px;height: 20px;box-sizing: border-box;border: 1px solid #FFF;border-radius: 50%;background: #909090;z-index: 999;";
+        start.appendChild(ball);
+        return ball;
+      }
+      let ball = createBall(); //创建动画小球函数
+      let x = 0,
+        y = 0,
+        delay = 800, //动画持续时间
+        timeSpace = 10, //圆球移动间隔
+        step = endX / (delay / timeSpace);
+      let timer = setInterval(function() {
+        if (Math.abs(x) >= Math.abs(endX)) {
+          //水平方向移动超过最大距离则取消移动，到达购物车
+          clearInterval(timer);
+          ball.parentNode && ball.parentNode.removeChild(ball); //移除圆球
+          ball = null;
+        } else {
+          x += step; //水平移动
+          y = a * x * x + b * x; //垂直移动
+          ball.style.top = startY - y + "px";
+          ball.style.left = x + startX + "px";
+        }
+      }, timeSpace);
     }
   }
 };
@@ -614,7 +676,7 @@ bt {
 }
 .scene-item-use-title {
   position: absolute;
-  bottom: 1rem;
+  bottom: 1.2rem;
   left: 0;
   right: 0;
   z-index: 1;
@@ -702,7 +764,7 @@ bt {
 .scene-item-bottom .scene-item-bottom-text {
   position: absolute;
   bottom: 0.8rem;
-  left: 8rem;
+  left: 7.6rem;
   z-index: 1;
   font-size: 0.71428571rem;
   overflow: hidden;

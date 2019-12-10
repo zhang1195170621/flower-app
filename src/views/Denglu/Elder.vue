@@ -29,7 +29,6 @@
     </van-grid>
 
     <div class="guess">
-      <div class="guess-title">猜你喜欢</div>
       <!-- 列表 -->
       <div class="guess-list">
         <div class="guess-item">
