@@ -13,7 +13,7 @@
 
       <div class="zhuce_formgroup">
         <div class="formgroup-input">
-          <input placeholder="请输入手机号" autocomplete="off" type="tel" />
+          <input v-model="name" placeholder="请输入手机号" autocomplete="off" type="tel" />
         </div>
       </div>
 
@@ -26,12 +26,12 @@
 
       <div class="zhuce_formgroup">
         <div class="formgroup-input">
-          <input placeholder="请设置密码" autocomplete="off" type="password" />
+          <input v-model="password" placeholder="请设置密码" autocomplete="off" type="password" />
         </div>
       </div>
 
       <div class="form-contrl">
-        <button type="button" class="formbtn">注册</button>
+        <button type="button" class="formbtn" @click="zhuce()">注册</button>
       </div>
 
       <div class="flex" style="margin-top: 34px;">
@@ -48,6 +48,47 @@
     </section>
   </div>
 </template>
+
+
+<script>
+import axios from "axios";
+export default {
+  data() {
+    return {
+      name: "",
+      password: "",
+      pd: ""
+    };
+  },
+  methods: {
+    zhuce() {
+      if (this.userName == "" || this.password == "") {
+        alert("请输入用户名或密码");
+      } else {
+        axios({
+          url: "http://api.cat-shop.penkuoer.com/api/v1/auth/reg",
+          method: "post",
+          data: {
+            userName: this.name,
+            password: this.password
+          }
+        })
+          .then(res => {
+            this.pd = res.data.code;
+          })
+          .catch(err => console.log(err));
+      }
+      if (this.pd == "error") {
+        alert("用户名已存在");
+      }
+      if (this.pd == "success") {
+        this.$router.push({ name: "Denglu" });
+      }
+    }
+  }
+};
+</script>
+
 
 <style>
 .zhuce_formgroup + .zhuce_formgroup {

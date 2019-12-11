@@ -584,7 +584,8 @@ bt {
   vertical-align: middle;
 }
 .conpany-info {
-  display: -webkit-box;
+  display: flex;
+  padding-top: 3rem;
   justify-content: center;
   align-items: center;
   height: 1.8rem;

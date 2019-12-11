@@ -1,5 +1,6 @@
 <template>
   <div class="cart">
+    
     <van-nav-bar title="购物车" left-text left-arrow @click-left="onClickLeft"></van-nav-bar>
     <section class="main">
       <div class="emptycart">

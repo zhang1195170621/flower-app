@@ -3,7 +3,7 @@
     <van-nav-bar title="积分" left-arrow @click-left="onClickLeft">
       <van-icon name="wap-nav" slot="right" />
     </van-nav-bar>
-    <section class="container">
+    <section class="huiyuan_container">
       <div class="main">
         <div class="top">
           <a href="#" class="rule">积分规则</a>

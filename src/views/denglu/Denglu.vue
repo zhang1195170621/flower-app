@@ -14,18 +14,18 @@
       </div>
       <div class="formgroup">
         <div class="formgroup-input">
-          <input placeholder="请输入邮箱或手机号" autocomplete="off" type="text" />
+          <input v-model="name" placeholder="请输入邮箱或手机号" autocomplete="off" type="text" />
         </div>
       </div>
       <div class="formgroup formgroup1">
         <div class="formgroup-input">
-          <input placeholder="请输入登录密码" autocomplete="off" type="password" />
+          <input v-model="password" placeholder="请输入登录密码" autocomplete="off" type="password" />
           <div class="formgroup-input-icon"></div>
         </div>
         <div class="formgroup-btn formgroup-btn-borderleft">忘记密码?</div>
       </div>
       <div class="form-contrl">
-        <button type="button" class="formbtn">登录</button>
+        <button type="button" class="formbtn" @click="denglu()">登录</button>
       </div>
 
       <div class="flex">
@@ -235,3 +235,46 @@
   flex-wrap: wrap;
 }
 </style>
+
+<script>
+import axios from "axios";
+export default {
+  data() {
+    return {
+      name: "",
+      password: "",
+      pd: "",
+      token: ""
+    };
+  },
+  methods: {
+    denglu() {
+      if (this.userName == "" || this.password == "") {
+        alert("请输入用户名或密码");
+      } else {
+        axios({
+          url: "http://api.cat-shop.penkuoer.com/api/v1/auth/login",
+          method: "post",
+          data: {
+            userName: this.name,
+            password: this.password
+          }
+        })
+          .then(res => {
+            console.log(res);
+            this.token = res.data.token;
+            this.pd = res.data.code;
+          })
+          .catch(err => console.log(err));
+      }
+      if (this.pd == "error") {
+        alert("请输入正确用户名或密码");
+      }
+      if (this.pd == "success") {
+        this.$router.push({ name: "Me" });
+        localStorage.setItem("token", this.token);
+      }
+    }
+  }
+};
+</script>
