@@ -51,6 +51,7 @@
     </section>
   </div>
 </template>
+
 <style>
 .youxiang_formgroup {
   display: flex;

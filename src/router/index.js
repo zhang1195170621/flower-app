@@ -17,7 +17,13 @@ import Shouhuo from '../views/denglu/Shouhuo.vue'
 import Dizhi from '../views/denglu/Dizhi.vue'
 import Youxiang from '../views/denglu/youxiang.vue'
 import shoujidenglu from '../views/denglu/shoujidenglu.vue'
+import Shengri from '../views/denglu/shengri.vue'
 
+import Shoucang from '../views/denglu/shoucang.vue'
+import Liulanjilu from '../views/denglu/liulanjilu.vue'
+
+import Kefu from '../views/denglu/kefu.vue'
+import Shezhi from '../views/denglu/shezhi.vue'
 
 
 
@@ -66,18 +72,20 @@ const routes = [{
     path: '/youhui',
     name: 'Youhui',
     component: Yh,
+    meta: {
+      isLogin: true
+    }
+
   },
   {
     path: '/quanxian',
     name: 'Quanxian',
     component: Qx,
+    meta: {
+      isLogin: true
+    }
   },
-  {
-    path: '/l',
-    name: 'DL',
-    component: Dl,
 
-  },
   {
     path: '/h',
     name: 'DH',
@@ -104,32 +112,91 @@ const routes = [{
   }, {
     path: '/yuer',
     name: "Yuer",
-    component: Yuer
+    component: Yuer,
+    meta: {
+      isLogin: true
+    }
   }, {
     path: '/huiyuan',
     name: "Huiyuan",
-    component: Huiyuan
+    component: Huiyuan,
+    meta: {
+      isLogin: true
+    }
   }, {
     path: '/shouhuo',
     name: "Shouhuo",
-    component: Shouhuo
+    component: Shouhuo,
+    meta: {
+      isLogin: true
+    }
   }, {
     path: '/dizhi',
     name: "Dizhi",
     component: Dizhi
+
   }, {
     path: '/youxiang',
     name: "Youxiang",
-    component: Youxiang
+    component: Youxiang,
+
   }, {
     path: '/shoujidenglu',
     name: "shoujidenglu",
-    component: shoujidenglu
+    component: shoujidenglu,
+
+  }, {
+    path: '/shengri',
+    name: "shengri",
+    component: Shengri,
+    meta: {
+      isLogin: true
+    }
+  }, {
+    path: '/shoucang',
+    name: "shoucang",
+    component: Shoucang,
+    meta: {
+      isLogin: true
+    }
+  }, {
+    path: '/liulanjilu',
+    name: "liulanjilu",
+    component: Liulanjilu,
+    meta: {
+      isLogin: true
+    }
+  }, {
+    path: '/kefu',
+    name: "Kefu",
+    component: Kefu,
+    meta: {
+      isLogin: true
+    }
+  }, {
+    path: '/shezhi',
+    name: "shezhi",
+    component: Shezhi,
+    meta: {
+      isLogin: true
+    }
   }
 ];
 
 const router = new VueRouter({
   routes,
 });
-
+router.beforeEach((to, from, next) => {
+  if (to.meta.isLogin) {
+    if (localStorage.getItem("token")) {
+      next()
+    } else {
+      next({
+        name: "Denglu"
+      })
+    }
+  } else {
+    next()
+  }
+})
 export default router;

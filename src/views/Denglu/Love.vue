@@ -114,7 +114,7 @@
             </div>
             <div class="guess-item-detail">
               <div class="guess-item-info">
-                <span class="guess-item-name">199枝玫瑰赠德芙心语巧克力</span>·
+                <span class="guess-item-name">199枝玫瑰赠德芙心语巧克力</span>
                 <span class="guess-item-desc">33枝戴安娜、66枝红玫瑰、1扎满天星</span>
               </div>
               <div class="guess-item-price">¥629</div>

@@ -4,12 +4,27 @@
     <div class="me_main">
       <!-- 登录/注册 -->
       <div class="banner">
-        <div class="login">
+        <div class="login" v-show="showName">
           <p class="login-hi">Hi,欢迎来到花礼网</p>
           <p class="denglu">
             <router-link :to="{name:'Denglu'}">登录/注册</router-link>
             <router-view />
           </p>
+        </div>
+        <div class="user_login" v-show="showuserName">
+          <div class="user_login_pic">
+            <a href="javascript:" class="user_login_a">
+              <img src="https://img02.hua.com/pc/assets/img/avatar_default_06.jpg" alt="用户头像" />
+            </a>
+          </div>
+          <div class="user_login_info">
+            <p class="user_login_info-name">{{username}}</p>
+            <a href="javascript:">
+              <p class="user_login_p">
+                <span class="user_login_p_s">注册会员</span>
+              </p>
+            </a>
+          </div>
         </div>
       </div>
       <!-- 我的订单 -->
@@ -17,7 +32,7 @@
         <div class="panel-head">
           <div class="panel-head-title">我的订单</div>
           <div class="panel-head-right">
-            <a @click="DL">全部订单</a>
+            <a>全部订单</a>
           </div>
         </div>
         <div class="panel-body">
@@ -63,9 +78,9 @@
           <van-grid-item icon="after-sale" text="余额" :to="{name:'Yuer'}" />
           <van-grid-item icon="gem-o" text="会员积分" :to="{name:'Huiyuan'}" />
           <van-grid-item icon="logistics" text="收货地址" :to="{name:'Shouhuo'}" />
-          <van-grid-item icon="volume-o" text="生日纪念提醒" />
-          <van-grid-item icon="star-o" text="收藏" />
-          <van-grid-item icon="clock-o" text="浏览记录" />
+          <van-grid-item icon="volume-o" text="生日纪念提醒" :to="{name:'shengri'}" />
+          <van-grid-item icon="star-o" text="收藏" :to="{name:'shoucang'}" />
+          <van-grid-item icon="clock-o" text="浏览记录" :to="{name:'liulanjilu'}" />
         </van-grid>
       </div>
       <!-- 专属秘书 -->
@@ -93,10 +108,10 @@
       <div class="panel">
         <div class="panel-body">
           <van-grid>
-            <van-grid-item icon="service-o" text="联系客服" />
+            <van-grid-item icon="service-o" text="联系客服" :to="{name:'Kefu'}" />
             <van-grid-item icon="question-o" text="帮助中心" />
             <van-grid-item icon="info-o" text="关于花礼" />
-            <van-grid-item icon="setting-o" text="设置" />
+            <van-grid-item icon="setting-o" text="设置" :to="{name:'shezhi'}" />
           </van-grid>
         </div>
       </div>
@@ -105,19 +120,29 @@
 </template>
 
  <script>
+import axios from "axios";
+import { getUsers } from "../api/product.js";
+
 export default {
+  created() {
+    if (localStorage.getItem("token")) {
+      this.showuserName = true;
+      this.showName = false;
+    }
+    getUsers().then(res => {
+      this.username = res.userName;
+    });
+  },
+  data() {
+    return {
+      showuserName: false,
+      showName: true,
+      username: ""
+    };
+  },
   methods: {
     onClickLeft() {
       this.$router.go(-1);
-    },
-
-    DL() {
-      if (localStorage.getItem("token")) {
-      } else {
-        this.$router.push({
-          name: "Denglu"
-        });
-      }
     }
   }
 };
@@ -125,6 +150,53 @@ export default {
 
 
 <style>
+.user_login_p_s {
+  background-color: #fe6600;
+  display: inline-flex;
+  max-height: 1.42857143rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.14285714rem 0.57142857rem 0.14285714rem 0.28571429rem;
+  border-radius: 3rem;
+  overflow: hidden;
+  color: #fff;
+}
+.user_login_p {
+  font-size: 0.71428571rem;
+  text-align: center;
+  margin-top: 0.28571429rem;
+}
+.user_login_info-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.user_login_info {
+  color: #fff;
+  max-width: 8.57142857rem;
+}
+.user_login_a img {
+  height: 100%;
+  vertical-align: top;
+  width: 100%;
+}
+.user_login_a {
+  height: 100%;
+  display: block;
+}
+.user_login_pic {
+  width: 4.57142857rem;
+  height: 4.57142857rem;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  margin-right: 1.42857143rem;
+}
+.user_login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .me {
   background: #e9ecf0;
 }
