@@ -8,17 +8,15 @@ import {
   Row,
   Col
 } from 'vant';
-
+import axios from 'axios'
 
 
 Vue.use(Row).use(Col);
 
 Vue.use(Vant);
-
+Vue.use(axios);
 
 Vue.config.productionTip = false;
-
-
 
 new Vue({
   router,

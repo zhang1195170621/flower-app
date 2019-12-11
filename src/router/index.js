@@ -32,16 +32,17 @@ import Shezhi from '../views/denglu/shezhi.vue'
 import index from '../views/index.vue'
 import DGemini from '../views/denglu/Gemini.vue';
 
-
 Vue.use(VueRouter);
 
-const routes = [{
+const routes = [
+  {
     path: '/',
     name: 'Index',
     redirect: '/home',
     component: index,
 
-    children: [{
+    children: [
+      {
         path: '/home',
         name: 'Home',
         component: Home,
@@ -85,7 +86,6 @@ const routes = [{
       isLogin: true
     }
   },
-
   {
     path: '/h',
     name: 'DH',
@@ -97,7 +97,7 @@ const routes = [{
     component: DDl,
   },
   {
-    path: '/e',
+    path: '/d_e',
     name: 'DE',
     component: De,
   },
@@ -105,11 +105,13 @@ const routes = [{
     path: '/d_g',
     name: 'DGemini',
     component: DGemini,
-  }, {
+  },
+  {
     path: '/zhuce',
-    name: "Zhuce",
-    component: Zhuce
-  }, {
+    name: 'Zhuce',
+    component: Zhuce,
+  },
+  {
     path: '/yuer',
     name: "Yuer",
     component: Yuer,
