@@ -166,7 +166,7 @@
               <div class="product-item-info-bottom-left">
                 <p class="product-item-info-prices">
                   <strong>¥{{item.price}}</strong>
-                  <s>¥{{item.oldPrcice}}</s>
+                  <s>¥{{item.oldPrice}}</s>
                 </p>
                 <p class="product-item-info-sales">已销售{{item.ys}}万件</p>
                 <p @click="aaa(item,$event)">
@@ -201,7 +201,7 @@
               <div class="product-item-info-bottom-left">
                 <p class="product-item-info-prices">
                   <strong>¥{{item.price}}</strong>
-                  <s>¥{{item.oldPrcice}}</s>
+                  <s>¥{{item.oldPrice}}</s>
                 </p>
                 <p class="product-item-info-sales">已销售{{item.ys}}万件</p>
                 <p @click="aaa(item,$event)">
@@ -223,7 +223,6 @@
     <section>
       <div class="sy_guess">
         <h3 class="product-title">永生花推荐</h3>
-        <!-- 列表 -->
         <div class="sy_guess-list">
           <div class="guess-item">
             <a href>
@@ -233,7 +232,7 @@
               <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
                   <van-tag round type="warning">节日定制款</van-tag>
-                  <p class="guess-item-name">守护初心口红款礼盒/炽热红</p>
+                  <p class="sy_guess-item-name">守护初心口红款礼盒/炽热红</p>
                 </div>
                 <div class="guess-item-price">￥999</div>
                 <p>已销售104件</p>
@@ -255,7 +254,7 @@
               <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
                   <van-tag round type="warning">畅销</van-tag>
-                  <p class="guess-item-name">我如此爱你-口红款999·专柜正品Dior#999口红＋进口永生玫瑰礼盒</p>
+                  <p class="sy_guess-item-name">我如此爱你-口红款999·专柜正品Dior#999口红＋进口永生玫瑰礼盒</p>
                 </div>
                 <div class="guess-item-price">￥588</div>
                 <p>已销售6361件</p>
@@ -270,7 +269,7 @@
               <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
                   <van-tag round type="warning">创意新品</van-tag>
-                  <p class="guess-item-name">一鹿(路)有你永生花小夜灯·永生花礼盒</p>
+                  <p class="sy_guess-item-name">一鹿(路)有你永生花小夜灯·永生花礼盒</p>
                 </div>
                 <div class="guess-item-price">￥298</div>
                 <p>已销售72件</p>
@@ -285,7 +284,7 @@
               <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
                   <van-tag round type="warning">创意新品</van-tag>
-                  <p class="guess-item-name">永生花满月艺术台灯/朦胧粉·永生花台灯</p>
+                  <p class="sy_guess-item-name">永生花满月艺术台灯/朦胧粉·永生花台灯</p>
                 </div>
                 <div class="guess-item-price">￥398</div>
                 <p>已销售75件</p>
@@ -306,12 +305,12 @@
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
-                <img src="https://img01.hua.com/uploadpic/newpic/1073257.jpg_220x240.jpg" alt />
+                <img src="https://img01.hua.com/uploadpic/newpic/9092114.jpg_220x240.jpg" alt />
               </div>
               <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
                   <van-tag round type="warning">节日定制款</van-tag>
-                  <p class="guess-item-name">守护初心口红款礼盒/炽热红</p>
+                  <p class="sy_guess-item-name">守护初心口红款礼盒/炽热红</p>
                 </div>
                 <div class="guess-item-price">￥999</div>
                 <p>已销售104件</p>
@@ -325,14 +324,14 @@
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
-                <img src="https://img01.hua.com/uploadpic/newpic/1073185.jpg_220x240.jpg" alt />
+                <img src="https://img01.hua.com/uploadpic/newpic/5602016.jpg_220x240.jpg" alt />
               </div>
               <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
                   <van-tag round type="warning">畅销</van-tag>
-                  <p class="guess-item-name">我如此爱你-口红款999·专柜正品Dior#999口红＋进口永生玫瑰礼盒</p>
+                  <p class="sy_guess-item-name">真爱+生日蛋糕B款红玫瑰9枝</p>
                 </div>
-                <div class="guess-item-price">￥588</div>
+                <div class="guess-item-price">￥288</div>
                 <p>已销售6361件</p>
               </div>
             </a>
@@ -340,15 +339,15 @@
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
-                <img src="https://img01.hua.com/uploadpic/newpic/1073264.jpg_220x240.jpg" alt />
+                <img src="https://img01.hua.com/uploadpic/newpic/5602045.jpg_220x240.jpg" alt />
               </div>
               <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
                   <van-tag round type="warning">创意新品</van-tag>
-                  <p class="guess-item-name">一鹿(路)有你永生花小夜灯·永生花礼盒</p>
+                  <p class="sy_guess-item-name">烂漫果粉蛋糕精品花.水果蛋糕</p>
                 </div>
                 <div class="guess-item-price">￥298</div>
-                <p>已销售72件</p>
+                <p>已销售1176件</p>
               </div>
             </a>
           </div>
@@ -356,15 +355,15 @@
           <div class="guess-item">
             <a href>
               <div class="guess-item-img">
-                <img src="https://img01.hua.com/uploadpic/newpic/1073263.jpg_220x240.jpg" alt />
+                <img src="https://img01.hua.com/uploadpic/newpic/5010023.jpg_220x240.jpg" alt />
               </div>
               <div class="sy_guess-item-detail">
                 <div class="guess-item-info">
                   <van-tag round type="warning">创意新品</van-tag>
-                  <p class="guess-item-name">永生花满月艺术台灯/朦胧粉·永生花台灯</p>
+                  <p class="sy_guess-item-name">蛋糕花满月艺术品</p>
                 </div>
-                <div class="guess-item-price">￥398</div>
-                <p>已销售75件</p>
+                <div class="guess-item-price">￥138</div>
+                <p>已销售2.1万件</p>
               </div>
             </a>
           </div>
@@ -484,48 +483,48 @@ export default {
         },
         {
           image:
-            "https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg",
-          title: "一往情深",
-          xq: "aaaa:19枝红玫瑰，勿忘我0.1扎",
-          price: 239,
-          oldPrice: 315,
-          ys: 7.5
+            "https://img01.hua.com/uploadpic/newpic/9012009.jpg_220x240.jpg",
+          title: "忘情巴黎",
+          xq: "33枝红玫瑰",
+          price: 298,
+          oldPrice: 382,
+          ys: 6.5
         },
         {
           image:
-            "https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg",
-          title: "一往情深",
-          xq: "aaaa:19枝红玫瑰，勿忘我0.1扎",
-          price: 239,
-          oldPrice: 315,
-          ys: 7.5
+            "https://img01.hua.com/uploadpic/newpic/9012437.jpg_220x240.jpg",
+          title: "粉雪佳人",
+          xq: "戴安娜粉玫瑰11枝,白色百合2枝",
+          price: 219,
+          oldPrice: 282,
+          ys: 1.5
         },
         {
           image:
-            "https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg",
-          title: "一往情深",
-          xq: "aaaa:19枝红玫瑰，勿忘我0.1扎",
-          price: 239,
-          oldPrice: 315,
-          ys: 7.5
+            "https://img01.hua.com/uploadpic/newpic/9012089.jpg_220x240.jpg",
+          title: "爱在心头",
+          xq: "玫瑰50枝:戴安娜粉玫瑰19枝",
+          price: 389,
+          oldPrice: 479,
+          ys: 1.9
         },
         {
           image:
-            "https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg",
-          title: "一往情深",
-          xq: "aaaa:19枝红玫瑰，勿忘我0.1扎",
-          price: 239,
-          oldPrice: 315,
-          ys: 7.5
+            "https://img01.hua.com/uploadpic/newpic/9012177.jpg_220x240.jpg",
+          title: "不变的承诺",
+          xq: "99枝红玫瑰",
+          price: 539,
+          oldPrice: 766,
+          ys: 6.2
         },
         {
           image:
-            "https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg",
-          title: "一往情深",
-          xq: "aaaa:19枝红玫瑰，勿忘我0.1扎",
-          price: 239,
-          oldPrice: 315,
-          ys: 7.5
+            "https://img01.hua.com/uploadpic/newpic/9012450.jpg_220x240.jpg",
+          title: "韩式系列/初心不负",
+          xq: "韩式花束系列花艺师全新打造",
+          price: 198,
+          oldPrice: 298,
+          ys: 115
         }
       ],
       show: false
@@ -912,6 +911,13 @@ bt {
   height: 6.5rem;
   padding: 0.42857143rem 0.57142857rem;
 }
+.sy_guess-item-name {
+  white-space: nowrap;
+  font-size: 0.85714286rem;
+  color: #232628;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 /* .guo_guess-title {
   text-align: center;
   height: 3.6rem;
@@ -930,11 +936,7 @@ bt {
   font-size: 1rem;
   color: #ff734c;
 }
-.guo_guess-item-name {
-  white-space: nowrap;
-  font-size: 0.85714286rem;
-  color: #232628;
-}
+
 .guo_uess-item-info {
   font-size: 0.85714286rem;
   color: #232628;

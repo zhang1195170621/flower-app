@@ -96,7 +96,7 @@
             <van-grid-item icon="service-o" text="联系客服" />
             <van-grid-item icon="question-o" text="帮助中心" />
             <van-grid-item icon="info-o" text="关于花礼" />
-            <van-grid-item icon="setting-o" text="设置" />
+            <van-grid-item icon="setting-o" text="设置" :to="{name: 'Shezhi'}" />
           </van-grid>
         </div>
       </div>

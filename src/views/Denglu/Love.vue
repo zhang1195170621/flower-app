@@ -1,5 +1,5 @@
 <template>
-  <div class="fl">
+  <div class="fl" id="love">
     <van-nav-bar title="爱情鲜花" left-arrow @click-left="onClickLeft">
       <van-icon name="service-o" slot="right" />
       <van-icon name="wap-nav" slot="right" />
@@ -12,7 +12,7 @@
     </van-grid>
     <van-grid :border="false" :column-num="5">
       <van-grid-item>
-        <van-tag size="medium">送女友</van-tag>
+        <van-tag size="medium">送女友1</van-tag>
       </van-grid-item>
       <van-grid-item>
         <van-tag size="medium">送男性</van-tag>
@@ -31,122 +31,20 @@
     <div class="guess">
       <!-- 列表 -->
       <div class="guess-list">
-        <div class="guess-item">
+        <div class="guess-item" v-for="item in data" :key="item._id">
           <a href>
             <div class="guess-item-img">
               <img
-                src="https://img01.hua.com/uploadpic/newpic/9092112.jpg"
+                :src="item.coverImg = item.coverImg.indexOf('http') == 0 ? item.coverImg : 'http://api.cat-shop.penkuoer.com' + item.coverImg"
                 alt
               />
             </div>
             <div class="guess-item-detail">
               <div class="guess-item-info">
-                <span class="guess-item-name">99枝玫瑰赠德芙心语巧克力</span>·
-                <span class="guess-item-desc"
-                  >33枝戴安娜、66枝红玫瑰、1扎满天星</span
-                >
+                <span class="guess-item-name">{{ item.name }}</span>·
+                <span class="guess-item-desc">{{ item.descriptions}}</span>
               </div>
-              <div class="guess-item-price">¥629</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="guess-item">
-          <a href>
-            <div class="guess-item-img">
-              <img
-                src="https://img01.hua.com/uploadpic/newpic/9012177.jpg"
-                alt
-              />
-            </div>
-            <div class="guess-item-detail">
-              <div class="guess-item-info">
-                <span class="guess-item-name">77枝玫瑰赠德芙心语巧克力</span>·
-                <span class="guess-item-desc"
-                  >33枝戴安娜、66枝红玫瑰、1扎满天星</span
-                >
-              </div>
-              <div class="guess-item-price">¥777</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="guess-item">
-          <a href>
-            <div class="guess-item-img">
-              <img
-                src="https://img01.hua.com/uploadpic/newpic/9010011.jpg"
-                alt
-              />
-            </div>
-            <div class="guess-item-detail">
-              <div class="guess-item-info">
-                <span class="guess-item-name">9枝玫瑰赠德芙心语巧克力</span>·
-                <span class="guess-item-desc"
-                  >33枝戴安娜、66枝红玫瑰、1扎满天星</span
-                >
-              </div>
-              <div class="guess-item-price">¥1456</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="guess-item">
-          <a href>
-            <div class="guess-item-img">
-              <img
-                src="https://img01.hua.com/uploadpic/newpic/9010966.jpg"
-                alt
-              />
-            </div>
-            <div class="guess-item-detail">
-              <div class="guess-item-info">
-                <span class="guess-item-name">49枝玫瑰赠德芙心语巧克力</span>·
-                <span class="guess-item-desc"
-                  >33枝戴安娜、66枝红玫瑰、1扎满天星</span
-                >
-              </div>
-              <div class="guess-item-price">¥389</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="guess-item">
-          <a href>
-            <div class="guess-item-img">
-              <img
-                src="https://img01.hua.com/uploadpic/newpic/9012009.jpg"
-                alt
-              />
-            </div>
-            <div class="guess-item-detail">
-              <div class="guess-item-info">
-                <span class="guess-item-name">89枝玫瑰赠德芙心语巧克力</span>·
-                <span class="guess-item-desc"
-                  >33枝戴安娜、66枝红玫瑰、1扎满天星</span
-                >
-              </div>
-              <div class="guess-item-price">¥897</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="guess-item">
-          <a href>
-            <div class="guess-item-img">
-              <img
-                src="https://img01.hua.com/uploadpic/newpic/9010877.jpg"
-                alt
-              />
-            </div>
-            <div class="guess-item-detail">
-              <div class="guess-item-info">
-                <span class="guess-item-name">199枝玫瑰赠德芙心语巧克力</span>·
-                <span class="guess-item-desc"
-                  >33枝戴安娜、66枝红玫瑰、1扎满天星</span
-                >
-              </div>
-              <div class="guess-item-price">¥629</div>
+              <div class="guess-item-price">{{item.price}}</div>
             </div>
           </a>
         </div>
@@ -155,15 +53,28 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
+  data() {
+    return {
+      data: []
+    };
+  },
   methods: {
     onClickLeft() {
       this.$router.go(-1);
-    },
+    }
   },
+  created() {
+    axios
+      .get("http://api.cat-shop.penkuoer.com/api/v1/products?page=6")
+      .then(res => {
+        this.data = res.data.products;
+      });
+  }
 };
 </script>
-<style>
+<style scoped>
 .van-nav-bar__right {
   position: absolute;
   bottom: 0.1rem;
@@ -201,6 +112,7 @@ export default {
 }
 .guess-item-img img {
   width: 100%;
+  height: 177px;
   vertical-align: middle;
 }
 a {

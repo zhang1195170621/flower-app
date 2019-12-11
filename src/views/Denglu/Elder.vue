@@ -31,92 +31,20 @@
     <div class="guess">
       <!-- 列表 -->
       <div class="guess-list">
-        <div class="guess-item">
+        <div class="guess-item" v-for="item in data" :key="item._id">
           <a href>
             <div class="guess-item-img">
-              <img src="https://img01.hua.com/uploadpic/newpic/9092112.jpg" alt />
+              <img
+                :src="item.coverImg = item.coverImg.indexOf('http') == 0 ? item.coverImg : 'http://api.cat-shop.penkuoer.com' + item.coverImg"
+                alt
+              />
             </div>
             <div class="guess-item-detail">
               <div class="guess-item-info">
-                <span class="guess-item-name">99枝玫瑰赠德芙心语巧克力</span>·
-                <span class="guess-item-desc">33枝戴安娜、66枝红玫瑰、1扎满天星</span>
+                <span class="guess-item-name">{{item.name}}</span>
+                <span class="guess-item-desc">{{item.descriptions}}</span>
               </div>
-              <div class="guess-item-price">¥629</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="guess-item">
-          <a href>
-            <div class="guess-item-img">
-              <img src="https://img01.hua.com/uploadpic/newpic/9012177.jpg" alt />
-            </div>
-            <div class="guess-item-detail">
-              <div class="guess-item-info">
-                <span class="guess-item-name">99枝玫瑰赠德芙心语巧克力</span>·
-                <span class="guess-item-desc">33枝戴安娜、66枝红玫瑰、1扎满天星</span>
-              </div>
-              <div class="guess-item-price">¥629</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="guess-item">
-          <a href>
-            <div class="guess-item-img">
-              <img src="https://img01.hua.com/uploadpic/newpic/9010011.jpg" alt />
-            </div>
-            <div class="guess-item-detail">
-              <div class="guess-item-info">
-                <span class="guess-item-name">99枝玫瑰赠德芙心语巧克力</span>·
-                <span class="guess-item-desc">33枝戴安娜、66枝红玫瑰、1扎满天星</span>
-              </div>
-              <div class="guess-item-price">¥629</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="guess-item">
-          <a href>
-            <div class="guess-item-img">
-              <img src="https://img01.hua.com/uploadpic/newpic/9010966.jpg" alt />
-            </div>
-            <div class="guess-item-detail">
-              <div class="guess-item-info">
-                <span class="guess-item-name">99枝玫瑰赠德芙心语巧克力</span>·
-                <span class="guess-item-desc">33枝戴安娜、66枝红玫瑰、1扎满天星</span>
-              </div>
-              <div class="guess-item-price">¥629</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="guess-item">
-          <a href>
-            <div class="guess-item-img">
-              <img src="https://img01.hua.com/uploadpic/newpic/9012009.jpg" alt />
-            </div>
-            <div class="guess-item-detail">
-              <div class="guess-item-info">
-                <span class="guess-item-name">99枝玫瑰赠德芙心语巧克力</span>·
-                <span class="guess-item-desc">33枝戴安娜、66枝红玫瑰、1扎满天星</span>
-              </div>
-              <div class="guess-item-price">¥629</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="guess-item">
-          <a href>
-            <div class="guess-item-img">
-              <img src="https://img01.hua.com/uploadpic/newpic/9010877.jpg" alt />
-            </div>
-            <div class="guess-item-detail">
-              <div class="guess-item-info">
-                <span class="guess-item-name">99枝玫瑰赠德芙心语巧克力</span>·
-                <span class="guess-item-desc">33枝戴安娜、66枝红玫瑰、1扎满天星</span>
-              </div>
-              <div class="guess-item-price">¥629</div>
+              <div class="guess-item-price">¥{{item.price}}</div>
             </div>
           </a>
         </div>
@@ -125,11 +53,24 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
+  data() {
+    return {
+      data: []
+    };
+  },
   methods: {
     onClickLeft() {
       this.$router.go(-1);
     }
+  },
+  created() {
+    axios
+      .get("http://api.cat-shop.penkuoer.com/api/v1/products?page=8")
+      .then(res => {
+        this.data = res.data.products;
+      });
   }
 };
 </script>

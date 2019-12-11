@@ -10,32 +10,29 @@ import Qx from '../views/denglu/Quanxian.vue';
 import DDl from '../views/denglu/Love.vue';
 import Dh from '../views/denglu/Happy.vue';
 import De from '../views/denglu/Elder.vue';
-import Zhuce from '../views/denglu/zhuce.vue'
-import Yuer from '../views/denglu/yuer.vue'
-import Huiyuan from '../views/denglu/Huiyuan.vue'
-import Shouhuo from '../views/denglu/Shouhuo.vue'
-import Dizhi from '../views/denglu/Dizhi.vue'
-import Youxiang from '../views/denglu/youxiang.vue'
-import shoujidenglu from '../views/denglu/shoujidenglu.vue'
+import Zhuce from '../views/denglu/zhuce.vue';
+import Yuer from '../views/denglu/yuer.vue';
+import Huiyuan from '../views/denglu/Huiyuan.vue';
+import Shouhuo from '../views/denglu/Shouhuo.vue';
+import Dizhi from '../views/denglu/Dizhi.vue';
+import Youxiang from '../views/denglu/youxiang.vue';
+import shoujidenglu from '../views/denglu/shoujidenglu.vue';
+import shezhi from '../views/denglu/Shezhi.vue';
 
-
-
-
-
-
-import index from '../views/index.vue'
+import index from '../views/index.vue';
 import DGemini from '../views/denglu/Gemini.vue';
-
 
 Vue.use(VueRouter);
 
-const routes = [{
+const routes = [
+  {
     path: '/',
     name: 'Index',
     redirect: '/home',
     component: index,
 
-    children: [{
+    children: [
+      {
         path: '/home',
         name: 'Home',
         component: Home,
@@ -76,7 +73,6 @@ const routes = [{
     path: '/l',
     name: 'DL',
     component: Dl,
-
   },
   {
     path: '/h',
@@ -89,7 +85,7 @@ const routes = [{
     component: DDl,
   },
   {
-    path: '/e',
+    path: '/d_e',
     name: 'DE',
     component: De,
   },
@@ -97,35 +93,47 @@ const routes = [{
     path: '/d_g',
     name: 'DGemini',
     component: DGemini,
-  }, {
+  },
+  {
     path: '/zhuce',
-    name: "Zhuce",
-    component: Zhuce
-  }, {
+    name: 'Zhuce',
+    component: Zhuce,
+  },
+  {
     path: '/yuer',
-    name: "Yuer",
-    component: Yuer
-  }, {
+    name: 'Yuer',
+    component: Yuer,
+  },
+  {
     path: '/huiyuan',
-    name: "Huiyuan",
-    component: Huiyuan
-  }, {
+    name: 'Huiyuan',
+    component: Huiyuan,
+  },
+  {
     path: '/shouhuo',
-    name: "Shouhuo",
-    component: Shouhuo
-  }, {
+    name: 'Shouhuo',
+    component: Shouhuo,
+  },
+  {
     path: '/dizhi',
-    name: "Dizhi",
-    component: Dizhi
-  }, {
+    name: 'Dizhi',
+    component: Dizhi,
+  },
+  {
     path: '/youxiang',
-    name: "Youxiang",
-    component: Youxiang
-  }, {
+    name: 'Youxiang',
+    component: Youxiang,
+  },
+  {
     path: '/shoujidenglu',
-    name: "shoujidenglu",
-    component: shoujidenglu
-  }
+    name: 'shoujidenglu',
+    component: shoujidenglu,
+  },
+  {
+    path: '/shezhi',
+    name: 'Shezhi',
+    component: shezhi,
+  },
 ];
 
 const router = new VueRouter({
