@@ -89,7 +89,7 @@
           <div class="guanjia">
             <div class="guanjia-head">
               <div class="wxguanjia-head-left">
-                <img src="//img02.hua.com/m/images/wxguanjia-kf.png" />
+                <img src="../assets/5.png" />
                 <span>专属秘书|喜棠</span>
               </div>
 
