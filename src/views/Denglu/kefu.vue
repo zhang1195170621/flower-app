@@ -7,7 +7,7 @@
       <div class="wx_panel">
         <div class="wx_wxguanjia">
           <div class="wx_wxguanjia_head">
-            <img src="//img02.hua.com/m/images/wxguanjia-kf.png" />
+            <img src="../../assets/5.png" />
             <span>专属秘书|喜棠</span>
           </div>
           <div class="wx_wxguanjia_cont">Hi，我是您的专属秘书喜棠，添加我微信，我将帮您催单，有需求时，1对1帮您走绿色通道。</div>

@@ -646,7 +646,6 @@ bt {
 }
 .conpany-info {
   display: flex;
-  padding-top: 2rem;
   justify-content: center;
   align-items: center;
   height: 1.8rem;
@@ -656,7 +655,7 @@ bt {
   line-height: 2.57142857rem;
 }
 .conpany-info-item {
-  margin-left: 1.3rem;
+  margin-left: 1rem;
 }
 
 .van-grid-item__content--center {

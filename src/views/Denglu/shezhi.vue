@@ -2,9 +2,7 @@
   <div>
     <header class="headerbar">
       <div class="Sz-left">
-        <p>
-          <van-icon name="arrow-left" class="Sz" />
-        </p>
+        <van-icon name="arrow-left" class="Sz" />
       </div>
       <div class="Sz-content">
         <p>设置</p>

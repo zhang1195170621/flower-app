@@ -26,6 +26,11 @@ import Kefu from '../views/denglu/kefu.vue';
 import Shezhi from '../views/denglu/shezhi.vue';
 
 import index from '../views/index.vue';
+import Kefu from '../views/denglu/kefu.vue';
+import Shezhi from '../views/denglu/shezhi.vue';
+import xiangqing from '../views/denglu/xiangqing.vue';
+
+import index from '../views/index.vue';
 import DGemini from '../views/denglu/Gemini.vue';
 
 Vue.use(VueRouter);
