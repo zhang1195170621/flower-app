@@ -24,6 +24,8 @@ import Liulanjilu from '../views/denglu/liulanjilu.vue'
 
 import Kefu from '../views/denglu/kefu.vue'
 import Shezhi from '../views/denglu/shezhi.vue'
+import xiangqing from '../views/denglu/xiangqing.vue'
+
 
 
 
@@ -34,15 +36,13 @@ import DGemini from '../views/denglu/Gemini.vue';
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     name: 'Index',
     redirect: '/home',
     component: index,
 
-    children: [
-      {
+    children: [{
         path: '/home',
         name: 'Home',
         component: Home,
@@ -182,6 +182,11 @@ const routes = [
     meta: {
       isLogin: true
     }
+  }, {
+    path: '/xiangqing',
+    name: "xiangqing",
+    component: xiangqing,
+
   }
 ];
 
