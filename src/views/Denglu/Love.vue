@@ -12,7 +12,7 @@
     </van-grid>
     <van-grid :border="false" :column-num="5">
       <van-grid-item>
-        <van-tag size="medium">送女友1</van-tag>
+        <van-tag size="medium">送女友</van-tag>
       </van-grid-item>
       <van-grid-item>
         <van-tag size="medium">送男性</van-tag>
@@ -32,7 +32,7 @@
       <!-- 列表 -->
       <div class="guess-list">
         <div class="guess-item" v-for="item in data" :key="item._id">
-          <a href>
+          <router-link :to="{name:'xiangqing',query:{_id:item._id}}">
             <div class="guess-item-img">
               <img
                 :src="item.coverImg = item.coverImg.indexOf('http') == 0 ? item.coverImg : 'http://api.cat-shop.penkuoer.com' + item.coverImg"
@@ -41,12 +41,12 @@
             </div>
             <div class="guess-item-detail">
               <div class="guess-item-info">
-                <span class="guess-item-name">{{ item.name }}</span>·
+                <span class="guess-item-name">{{ item.name }}</span>
                 <span class="guess-item-desc">{{ item.descriptions}}</span>
               </div>
               <div class="guess-item-price">{{item.price}}</div>
             </div>
-          </a>
+          </router-link>
         </div>
       </div>
     </div>

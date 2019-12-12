@@ -10,26 +10,22 @@ import Qx from '../views/denglu/Quanxian.vue';
 import DDl from '../views/denglu/Love.vue';
 import Dh from '../views/denglu/Happy.vue';
 import De from '../views/denglu/Elder.vue';
-import Zhuce from '../views/denglu/zhuce.vue'
-import Yuer from '../views/denglu/yuer.vue'
-import Huiyuan from '../views/denglu/Huiyuan.vue'
-import Shouhuo from '../views/denglu/Shouhuo.vue'
-import Dizhi from '../views/denglu/Dizhi.vue'
-import Youxiang from '../views/denglu/youxiang.vue'
-import shoujidenglu from '../views/denglu/shoujidenglu.vue'
-import Shengri from '../views/denglu/shengri.vue'
+import Zhuce from '../views/denglu/zhuce.vue';
+import Yuer from '../views/denglu/yuer.vue';
+import Huiyuan from '../views/denglu/Huiyuan.vue';
+import Shouhuo from '../views/denglu/Shouhuo.vue';
+import Dizhi from '../views/denglu/Dizhi.vue';
+import Youxiang from '../views/denglu/youxiang.vue';
+import shoujidenglu from '../views/denglu/shoujidenglu.vue';
+import Shengri from '../views/denglu/shengri.vue';
 
-import Shoucang from '../views/denglu/shoucang.vue'
-import Liulanjilu from '../views/denglu/liulanjilu.vue'
+import Shoucang from '../views/denglu/shoucang.vue';
+import Liulanjilu from '../views/denglu/liulanjilu.vue';
+import xiangqing from '../views/denglu/xiangqing.vue';
+import Kefu from '../views/denglu/kefu.vue';
+import Shezhi from '../views/denglu/shezhi.vue';
 
-import Kefu from '../views/denglu/kefu.vue'
-import Shezhi from '../views/denglu/shezhi.vue'
-
-
-
-
-
-import index from '../views/index.vue'
+import index from '../views/index.vue';
 import DGemini from '../views/denglu/Gemini.vue';
 
 Vue.use(VueRouter);
@@ -74,17 +70,16 @@ const routes = [
     name: 'Youhui',
     component: Yh,
     meta: {
-      isLogin: true
-    }
-
+      isLogin: true,
+    },
   },
   {
     path: '/quanxian',
     name: 'Quanxian',
     component: Qx,
     meta: {
-      isLogin: true
-    }
+      isLogin: true,
+    },
   },
   {
     path: '/h',
@@ -113,76 +108,88 @@ const routes = [
   },
   {
     path: '/yuer',
-    name: "Yuer",
+    name: 'Yuer',
     component: Yuer,
     meta: {
-      isLogin: true
-    }
-  }, {
+      isLogin: true,
+    },
+  },
+  {
     path: '/huiyuan',
-    name: "Huiyuan",
+    name: 'Huiyuan',
     component: Huiyuan,
     meta: {
-      isLogin: true
-    }
-  }, {
+      isLogin: true,
+    },
+  },
+  {
     path: '/shouhuo',
-    name: "Shouhuo",
+    name: 'Shouhuo',
     component: Shouhuo,
     meta: {
-      isLogin: true
-    }
-  }, {
+      isLogin: true,
+    },
+  },
+  {
     path: '/dizhi',
-    name: "Dizhi",
-    component: Dizhi
-
-  }, {
+    name: 'Dizhi',
+    component: Dizhi,
+  },
+  {
     path: '/youxiang',
-    name: "Youxiang",
+    name: 'Youxiang',
     component: Youxiang,
-
-  }, {
+  },
+  {
     path: '/shoujidenglu',
-    name: "shoujidenglu",
+    name: 'shoujidenglu',
     component: shoujidenglu,
-
-  }, {
+  },
+  {
     path: '/shengri',
-    name: "shengri",
+    name: 'shengri',
     component: Shengri,
     meta: {
-      isLogin: true
-    }
-  }, {
+      isLogin: true,
+    },
+  },
+  {
     path: '/shoucang',
-    name: "shoucang",
+    name: 'shoucang',
     component: Shoucang,
     meta: {
-      isLogin: true
-    }
-  }, {
+      isLogin: true,
+    },
+  },
+  {
     path: '/liulanjilu',
-    name: "liulanjilu",
+    name: 'liulanjilu',
     component: Liulanjilu,
     meta: {
-      isLogin: true
-    }
-  }, {
+      isLogin: true,
+    },
+  },
+  {
     path: '/kefu',
-    name: "Kefu",
+    name: 'Kefu',
     component: Kefu,
     meta: {
-      isLogin: true
-    }
-  }, {
+      isLogin: true,
+    },
+  },
+  {
     path: '/shezhi',
-    name: "shezhi",
+    name: 'shezhi',
     component: Shezhi,
     meta: {
-      isLogin: true
-    }
-  }
+      isLogin: true,
+    },
+  },
+  {
+    path: '/xiangqing',
+    name: 'xiangqing',
+    component: xiangqing,
+  },
 ];
 
 const router = new VueRouter({
@@ -190,15 +197,15 @@ const router = new VueRouter({
 });
 router.beforeEach((to, from, next) => {
   if (to.meta.isLogin) {
-    if (localStorage.getItem("token")) {
-      next()
+    if (localStorage.getItem('token')) {
+      next();
     } else {
       next({
-        name: "Denglu"
-      })
+        name: 'Denglu',
+      });
     }
   } else {
-    next()
+    next();
   }
-})
+});
 export default router;

@@ -169,7 +169,7 @@
                   <s>¥{{item.oldPrice}}</s>
                 </p>
                 <p class="product-item-info-sales">已销售{{item.ys}}万件</p>
-                <p @click="aaa(item,$event)">
+                <p @click.stop="aaa(item,$event)">
                   <i
                     style="position: absolute;top: 20px;"
                     class="gouwuche van-icon van-icon-shopping-cart-o"
@@ -204,7 +204,7 @@
                   <s>¥{{item.oldPrice}}</s>
                 </p>
                 <p class="product-item-info-sales">已销售{{item.ys}}万件</p>
-                <p @click="aaa(item,$event)">
+                <p @click.stop="aaa(item,$event)">
                   <i
                     style="position: absolute;top: 20px;"
                     class="gouwuche van-icon van-icon-shopping-cart-o"
@@ -236,7 +236,7 @@
                 </div>
                 <div class="guess-item-price">￥999</div>
                 <p>已销售104件</p>
-                <p @click="aaa(item,$event)">
+                <p @click.stop="aaa(item,$event)">
                   <i
                     style="position: absolute;top: 20px;"
                     class="gouwuche van-icon van-icon-shopping-cart-o"
